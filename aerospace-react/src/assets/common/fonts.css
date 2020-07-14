@@ -1,0 +1,73 @@
+/*TODO  Variables */
+:root {
+
+    /*! Sizing */
+    --ratio: 1.2;
+    --base: 1.3;
+    --base-em: calc(var(--base) * 1em);
+    --base-px: calc(var(--base) * 14px);
+    --ms0: 1;
+    --ms1: var(--ratio);                    /* 1.2   */
+    --ms2: calc(var(--ratio) * var(--ms1)); /* 1.44  */
+    --ms3: calc(var(--ratio) * var(--ms2)); /* 1.728 */
+    --ms4: calc(var(--ratio) * var(--ms3)); /* 2.074 */
+    --ms5: calc(var(--ratio) * var(--ms4)); /* 2.488 */
+    --ms6: calc(var(--ratio) * var(--ms5)); /* 2.986 */
+    --ms7: calc(var(--ratio) * var(--ms6)); /* 3.583 */
+
+    /*! Colors */
+
+   --main_background:     #071013;
+   --body_background:          rgb(102, 8, 8);
+   --spec_background:       #010202;
+
+  --font_h1:         #071013;
+  --font_h2:       #000;
+  --font_h3:          #fff;
+  --font_h4:      #071013;
+  --font_h5:          #000;
+  --font_h6:          #071013;
+  --font_p:            #071013;
+  --font_a:          #071013;
+  --font_danger:       #071013;
+  --font_excla:#071013;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+  font-family: 'Roboto', sans-serif;
+
+}
+h2{ color: var(--font_title2);}
+h3{ color: var(--font_title3);}
+h4{ color: var(--font_title4);}
+.material-icons{
+  color: var(--font_danger);
+}
+h5{ color: var(--font_title2)}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(var(--base-em) * var(--ms0));
+    line-height: calc(var(--base) * var(--ms2));
+}
+h1,h2,h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+h6 { font-size: calc(var(--base-em) / var(--ms1)); }
+h5 { font-size: calc(var(--base-em) * var(--ms0)); }
+h4 { font-size: calc(var(--base-em) * var(--ms1)); }
+h3 { font-size: calc(1*var(--base-em) * var(--ms2)); }
+h2 { font-size: calc(1*var(--base-em) * var(--ms3));
+    line-height: calc(var(--base) * var(--ms1)); }
+h1 { font-size: calc(1.5*var(--base-em) * var(--ms4));
+    line-height: calc(var(--base) * var(--ms0)); }
+
+/* End font size and family */
+
+/* Extra fonts options */
+.u-textBigger { 
+    font-size: calc(var(--base-em) * var(--ms1)); 
+  }
+  
+.u-textSmaller { 
+    font-size: calc(var(--base-em) * var(--ms5)); 
+}
+/* End extra fonts options */

@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//* CSS
+import './assets/common/reset.css';
+import './assets/common/fonts.css';
 import './index.css';
+//* JSX 
 import App from './App';
+
+//* Default
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
