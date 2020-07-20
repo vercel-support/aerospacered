@@ -1,10 +1,7 @@
 .Content {
     width: 100vw;
     min-height: 100vh;
-    color: red;
+
     background-color: var(--body_background);
  
-}
-.test{
-    color: red;
 }

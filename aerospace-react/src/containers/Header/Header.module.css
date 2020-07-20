@@ -1,0 +1,105 @@
+
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    float: left;
+}
+
+
+/*TODO Logo Constainer */
+
+.LogoContainer{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+}
+
+.LogoImg{
+    height: 100px;
+    width: auto;
+
+}
+.LogoBrand{
+    line-height: normal;
+    align-self: center;
+}
+
+.LogoSpan{
+    color:var(--font_h1_span)
+}
+
+/*TODO Links */
+.LinkContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.Link{
+	padding: 10px;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+    transition: color 0.3s;
+    position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+}
+
+.Link::before,
+.Link::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.Link::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.Link::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.Link:hover,
+.Link:focus {
+    color: var(--font_a_active);
+    transition: color 0.2s linear;
+}
+
+.Link:hover::before,
+.Link:focus::before,
+.Link:hover::after,
+.Link:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}

@@ -1,0 +1,19 @@
+.Section {
+    height: 50px;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.article { 
+    composes: Section;
+    background-color: var(--article_bg);
+    color: yellow;
+    
+}
+
+.announcement{
+    composes: Section;
+    color: white;
+    background-color: var(--announcement_bg);
+}
+

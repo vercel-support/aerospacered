@@ -1,0 +1,8 @@
+.LandingBackground{
+    width: 100vw;
+    height: 100vh;
+    background:     linear-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)
+      ),url(../../static/images/Landings/Landing0.jpg); 
+}

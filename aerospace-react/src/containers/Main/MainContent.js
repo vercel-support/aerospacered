@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 
+
+//* Containers
+import News  from '../Tabs/News/News';
+
+
 class MainContent extends Component{
 
     render () {
         return (
 
             <React.Fragment>
-                <div> Tab </div>
-                <div> Content </div>
+        
+                <News/>
 
             </React.Fragment>
 

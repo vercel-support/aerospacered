@@ -17,24 +17,14 @@
 
     /*! Colors */
 
-   --main_background:     #071013;
-   --body_background:          rgb(102, 8, 8);
-   --spec_background:       #010202;
 
-  --font_h1:         #071013;
-  --font_h2:       #000;
-  --font_h3:          #fff;
-  --font_h4:      #071013;
-  --font_h5:          #000;
-  --font_h6:          #071013;
-  --font_p:            #071013;
-  --font_a:          #071013;
-  --font_danger:       #071013;
-  --font_excla:#071013;
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
   font-family: 'Roboto', sans-serif;
 
 }
+a{color: var(--font_a)}
+
+h1{color:var(--font_h1)}
 h2{ color: var(--font_title2);}
 h3{ color: var(--font_title3);}
 h4{ color: var(--font_title4);}
@@ -57,7 +47,7 @@ h4 { font-size: calc(var(--base-em) * var(--ms1)); }
 h3 { font-size: calc(1*var(--base-em) * var(--ms2)); }
 h2 { font-size: calc(1*var(--base-em) * var(--ms3));
     line-height: calc(var(--base) * var(--ms1)); }
-h1 { font-size: calc(1.5*var(--base-em) * var(--ms4));
+h1 { font-size: calc(0.55*var(--base-em) * var(--ms4));
     line-height: calc(var(--base) * var(--ms0)); }
 
 /* End font size and family */

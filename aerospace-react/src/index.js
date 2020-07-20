@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 //* CSS
 import './assets/common/reset.css';
 import './assets/common/fonts.css';
+import './assets/common/colors.css';
 import './index.css';
 //* JSX 
 import App from './App';

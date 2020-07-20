@@ -1,0 +1,23 @@
+:root {
+    --main_background:     #071013;
+    --body_background:          rgb(102, 8, 8);
+    --spec_background:       #010202;
+ 
+   --font_h1:         #fff;
+   --font_h1_span:      red;
+   --font_h2:       #000;
+   --font_h3:          #fff;
+   --font_h4:      #071013;
+   --font_h5:          #000;
+   --font_h6:          #071013;
+   --font_p:            #071013;
+   --font_a:          #fff;
+   --font_a_active:     red;
+   --font_danger:       #071013;
+   --font_excla:#071013;
+
+
+   /* TODO: News */
+   --article_bg: darkgray;
+   --announcement_bg: darkred;
+}
