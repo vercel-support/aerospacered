@@ -4,27 +4,48 @@ import Layout from './components/Layout/Layout'
 
 
 //* JSX Containers
-import Header from './containers/Header/Header';
+import Header from './components/Header/Header';
 import Landing from './containers/Landing/Landing';
 import MainContent from './containers/Main/MainContent';
-
+import Footer from './containers/Footer/Footer';
 //* CSS
-import classes from './assets/common/structure.module.css'
+//import classes from './assets/common/structure.module.css'
 
 
 class App extends Component {
+  state = {
+    showNavBar: false,
+  }
+  componentDidMount(){
+
+  }
+  //TODO Navbar controller
+  handleScroll = e => {
+    let top  = window.pageYOffset || document.documentElement.scrollTop;
+    const h = window.innerHeight;
+    if (top > h) {
+      this.setState({showNavBar: true})
+    }else{
+      this.setState({showNavBar: false})
+    }
+  }
+
+
+
+
+
   render(){
     return (
 
       <React.Fragment>       
         {/* Header */}  
-        <Header/>
+        <Header showNavBar={this.state.showNavBar}/>
         
 
         {/* End Header */} 
 
         {/* Landing */} 
-        <Landing/> 
+        <Landing /> 
 
         {/* End Body */}
 
@@ -41,17 +62,18 @@ class App extends Component {
 
         {/* End Footer */} 
       <div> 
-        
-        <Layout >
-          <h1> Keep fighting</h1>
-          <MainContent />
+        <Layout onScrollMethod={this.handleScroll}>
+          <MainContent   />
         </Layout>
       </div>
-
+      <Footer/>
       </React.Fragment>  
 
     );
   }
 }
+
+
+
 
 export default App;

@@ -1,0 +1,33 @@
+.IntroContainer {
+
+    display: flex;
+    flex-direction: column;
+    
+    
+    background: var(--intro_bg);
+/*     background: -moz-linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8e8e8",endColorstr="#ffffff",GradientType=1);
+ */
+    width: 95%;
+    padding: 2em;
+    padding-top: 1em;
+    margin: 0px auto 0px 60px;
+}
+.Intro_Title {
+}
+.Intro_Title span{
+    color: var(--font_h1_span);
+}
+.Intro_Label {
+    
+    color:var(--font_h1_label);
+    margin-top: -0.5em;
+    border-bottom: 1px solid gray;
+
+}
+.IntroBody {
+    text-align: justify;
+    padding-right: 1em;
+}

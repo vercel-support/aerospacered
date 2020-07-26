@@ -1,0 +1,57 @@
+.Footer{
+    margin-top: 3em;
+    width: 100vw;
+    height: 10em;
+    background-color: var(--foter_background);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    -webkit-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.75);
+}
+.SocialMediaContainer{
+    width: 60vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto auto;
+    padding: 2em;
+    align-content: center;
+
+}
+.SocialMediaContainer img{
+    height: 50px;
+    width: auto;
+
+}
+.CitationLink{
+    color:white;
+    bottom: 0;
+    line-height: 2em;
+    padding-left: 3em;    
+    width: 100vw;
+    height: 2em;
+    background-color: var(--citation_background);
+    justify-self: last baseline;
+    position: relative;
+}
+.CitationLink a{
+    color: var(--font_a_active);
+    text-decoration: none;
+
+}
+.CitationLink span{
+
+    position: absolute;
+    right: 0;
+    padding-right: 1.5em;
+}
+
+.aerospace_logo {
+    height: 200px;
+    display: block;
+    margin: auto;
+}

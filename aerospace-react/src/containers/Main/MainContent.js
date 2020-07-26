@@ -1,23 +1,27 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
+
+//* CSS
 
 
 //* Containers
-import News  from '../Tabs/News/News';
+// import News  from '../Tabs/News/News';
+import Intro  from '../Tabs/Intro/Intro';
+import SlideShow from './SlideShow/SlideShow';
 
+const MainContent = (props) =>{
 
-class MainContent extends Component{
-
-    render () {
         return (
 
-            <React.Fragment>
+            <div>
         
-                <News/>
+                <Intro />
+                {/*<News/> */}
+                <SlideShow/>
 
-            </React.Fragment>
+            </div>
 
         );
-    }
+
 
 }
 

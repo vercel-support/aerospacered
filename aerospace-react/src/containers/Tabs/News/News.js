@@ -9,7 +9,7 @@ import Article from '../../../components/News/Article/Article';
 const news = (props) =>{
     return(
 
-        <React.Fragment className={styles.News}>
+        <React.Fragment >
             <Article className={styles.Section} type='bitacora'/>
             <Article className={styles.Section} type='announcement'/>
 

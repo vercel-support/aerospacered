@@ -1,22 +1,26 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
 
 
 //* Containers
 import classes from './Landing.module.css';
 
-class Landing extends Component{
+const landing = (props) => {
 
-    render () {
+    
         return (
 
             <React.Fragment>
-                <div className={classes.LandingBackground}>
+                <div  className={classes.LandingBackground}>
+                    <div className={classes.arrow}  >
+                        <div className={classes.arrow_top}></div>
+                        <div className={classes.arrow_bottom}></div>
+                    </div>
                 </div>
             </React.Fragment>
 
         );
-    }
+    
 
 }
 
-export default Landing;
+export default landing;

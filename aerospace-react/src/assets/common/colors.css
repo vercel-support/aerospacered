@@ -1,9 +1,12 @@
 :root {
     --main_background:     #071013;
-    --body_background:          rgb(102, 8, 8);
+    --body_background:          white;
     --spec_background:       #010202;
+    --foter_background:      whitesmoke;
+    --citation_background:      #071013;
  
    --font_h1:         #fff;
+   --font_h1_label:     #071013;
    --font_h1_span:      red;
    --font_h2:       #000;
    --font_h3:          #fff;
@@ -17,7 +20,9 @@
    --font_excla:#071013;
 
 
-   /* TODO: News */
+   /* TODO: Tabs */
    --article_bg: darkgray;
    --announcement_bg: darkred;
+   --intro_bg: rgb(255,255,255);
+
 }

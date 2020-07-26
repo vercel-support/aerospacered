@@ -1,16 +1,43 @@
 
-.Header{
+.HeaderNormal{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: transparent;
+ 
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
     width: 100vw;
-    float: left;
+	float: left;
+}
+.headerInActive {
+	background-color: transparent;
+}
+.HeaderActive{
+	
+	background: linear-gradient(56deg, #1a1a1a, #090909);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 14s ease infinite;
+    -moz-animation: AnimationName 14s ease infinite;
+    animation: AnimationName 14s ease infinite;
 }
 
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
 
 /*TODO Logo Constainer */
 
@@ -27,7 +54,9 @@
 }
 .LogoBrand{
     line-height: normal;
-    align-self: center;
+	align-self: center;
+	opacity: 0;
+	transition: all 0.25s ease-in-out 0s;
 }
 
 .LogoSpan{

@@ -7,7 +7,7 @@ const layout = (props) => (
 
     <React.Fragment>
  
-        <main className={classes.Content}> 
+        <main className={classes.Content} onWheelCapture={props.onScrollMethod}> 
             {props.children}
         </main> 
     </React.Fragment>
