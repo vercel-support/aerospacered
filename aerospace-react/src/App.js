@@ -1,79 +1,65 @@
-import React, { Component } from 'react';
-import Layout from './components/Layout/Layout'
+import React, { Component } from "react";
 
-
+import { Route, Switch } from "react-router-dom";
 
 //* JSX Containers
-import Header from './components/Header/Header';
-import Landing from './containers/Landing/Landing';
-import MainContent from './containers/Main/MainContent';
-import Footer from './containers/Footer/Footer';
+import Layout from "./containers/General/Layout/Layout";
+import Header from "./containers/General/Header/Header";
+import Landing from "./containers/General/Landing/Landing";
+import MainContent from "./containers/Home/Main/MainContent";
+import Projects from './containers/Projects/Projects';
+import AboutUs from './containers/About_us/About_us';
+import Footer from "./containers/General/Footer/Footer";
 //* CSS
 //import classes from './assets/common/structure.module.css'
-
 
 class App extends Component {
   state = {
     showNavBar: false,
-  }
-  componentDidMount(){
-
-  }
+  };
+  componentDidMount() {}
   //TODO Navbar controller
-  handleScroll = e => {
-    let top  = window.pageYOffset || document.documentElement.scrollTop;
+  handleScroll = (e) => {
+    let top = window.pageYOffset || document.documentElement.scrollTop;
     const h = window.innerHeight;
     if (top > h) {
-      this.setState({showNavBar: true})
-    }else{
-      this.setState({showNavBar: false})
+      this.setState({ showNavBar: true });
+    } else {
+      this.setState({ showNavBar: false });
     }
-  }
+  };
 
-
-
-
-
-  render(){
+  render() {
     return (
+      <React.Fragment>
+        {/* Header */}
+        <Header showNavBar={this.state.showNavBar} />
 
-      <React.Fragment>       
-        {/* Header */}  
-        <Header showNavBar={this.state.showNavBar}/>
-        
+        {/* End Header */}
 
-        {/* End Header */} 
-
-        {/* Landing */} 
-        <Landing /> 
+        {/* Landing */}
+        <Landing />
 
         {/* End Body */}
 
+        <div>
+          <Layout onScrollMethod={this.handleScroll}>
+            <Switch>
+              <Route path='/about_us' component={AboutUs}/>
+              <Route path='/projects' component={Projects}/>
+              <Route path='/missions' component={AboutUs}/>
+              <Route path='/join_us' component={AboutUs}/>
+              <Route path='/' extact component={MainContent}/>
+            </Switch>
+          </Layout>
+        </div>
+  
 
-        {/* Body */}  
 
-        {/* End Body */}
-
-        {/* Mail box */}  
-
-        {/* End Mail box */} 
-
-        {/* Footer */}  
-
-        {/* End Footer */} 
-      <div> 
-        <Layout onScrollMethod={this.handleScroll}>
-          <MainContent   />
-        </Layout>
-      </div>
-      <Footer/>
-      </React.Fragment>  
-
+        <Footer />
+      </React.Fragment>
     );
   }
 }
-
-
-
 
 export default App;

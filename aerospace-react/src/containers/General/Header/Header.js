@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import classes from "./Header.module.css";
 
 //* Images
-import REA_Logo from "../../static/images/REA_Logo.png";
+import REA_Logo from '../../../static/images/REA_Logo.png'
 
 //TODO Sccrolling
 
@@ -45,11 +45,12 @@ const Header = (props)=>{
       <React.Fragment>
         <div className={HeaderClasses.join(" ")} ref={headerRef}>
           <div className={classes.LogoContainer}>
+            <a href='/'>
             <img
               src={REA_Logo}
               className={classes.LogoImg}
               alt="Red Ecuatoriana Aeroespacial\'s logo"
-            ></img>
+            /></a>
             <h1 className={classes.LogoBrand} ref={LogoBrandRef}>
               Red Ecuatoriana
               <span className={classes.LogoSpan}> Aeroespacial </span>
@@ -58,7 +59,7 @@ const Header = (props)=>{
 
           <div className={classes.LinkContainer}>
             <div>
-              <a className={classes.Link} href="https://github.com">
+              <a className={classes.Link} href="/projects">
                 
                 Projects
               </a>
@@ -76,7 +77,7 @@ const Header = (props)=>{
               </a>
             </div>
             <div>
-              <a className={classes.Link} href="https://github.com">
+              <a className={classes.Link} href="/about_us">
             
                 About us
               </a>

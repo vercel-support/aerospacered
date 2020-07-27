@@ -4,7 +4,7 @@ import React from 'react';
 import classes from './SlideShow.module.css';
 
 //* Gifs import
-import gif01 from '../../../static/videos/gif0.gif';
+import gif01 from '../../../../static/videos/gif0.gif';
 
 
 

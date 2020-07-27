@@ -1,0 +1,42 @@
+.projectContainer{
+    padding: 1em;
+    display: grid;
+    grid-template-areas: 'p_title p_title . '
+                        'p_img p_body p_body'
+                        'p_img p_coord p_coord';
+    
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px solid darkslategray;
+    align-items: center;
+    
+}
+.projectContainer h3{
+    grid-area: p_title;
+    font-size: 2.5rem;
+}
+
+.projectContainer img{
+    max-height: 300px;
+    width: auto;
+    grid-area: p_img;
+
+}
+.projectContainer p{
+    grid-area: p_body;
+    padding: 1em ;
+    padding-bottom: 0px;
+    text-align: justify;
+}
+.projectContainer span{
+    font-weight: bold;
+    font-style: italic;
+}
+.projectContainer ul{
+    grid-area: p_coord;
+    padding: 1em ;
+    padding-left: 1.5em;
+}
+.projectContainer a{
+    color: var(--font_a_active);
+}

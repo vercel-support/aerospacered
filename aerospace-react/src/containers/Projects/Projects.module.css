@@ -1,0 +1,9 @@
+.ProjectsContainer {
+    width: 95%;
+    padding: 2em;
+    padding-top: 1em;
+    margin: 0px auto 0px 60px;
+}
+.ProjectsContainer h1{
+    color: dimgrey;
+}

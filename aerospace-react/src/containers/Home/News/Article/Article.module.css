@@ -1,0 +1,31 @@
+.ArticleContainer{
+    display: grid;
+    grid-template-areas: 'art_title . .'
+                         'art_sub . . '
+                         'art_img . art_body';
+    grid-template-rows: 0.25fr 0.1fr 0.65fr;
+    grid-template-columns: 0.2fr 2rem 0.8fr;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid gray;
+    
+}
+
+.ArticleContainer h4{
+grid-area: art_title;
+}
+.ArticleContainer h6{
+grid-area: art_sub;
+margin-top: -1em;
+}
+.ArticleContainer img{
+    grid-area: art_img;
+    height: 200px;
+    width: auto;
+    padding: 1rem;
+}
+.ArticleContainer p{
+    grid-area: art_body;
+    text-align: justify;
+    line-height: normal;
+}

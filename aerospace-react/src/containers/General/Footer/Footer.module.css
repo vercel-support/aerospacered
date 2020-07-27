@@ -2,14 +2,15 @@
     margin-top: 3em;
     width: 100vw;
     height: 10em;
-    background-color: var(--foter_background);
+    background: url('../../../static/images/footer/bg0.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: flex-end;
-    -webkit-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.75);
-    box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.75);
+
 }
 .SocialMediaContainer{
     width: 60vw;
@@ -23,17 +24,24 @@
 
 }
 .SocialMediaContainer img{
-    height: 50px;
+    height: 60px;
     width: auto;
-
+    padding: 0.5em;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    transition: all 0.5s ease-in-out;
 }
+.SocialMediaContainer img:hover{
+    transform: scale(1.15);
+}
+
 .CitationLink{
     color:white;
     bottom: 0;
-    line-height: 2em;
     padding-left: 3em;    
     width: 100vw;
-    height: 2em;
+    height: 1.5em;
     background-color: var(--citation_background);
     justify-self: last baseline;
     position: relative;

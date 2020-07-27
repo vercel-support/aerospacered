@@ -1,0 +1,28 @@
+.NewsContainer {
+    width: 95%;
+    padding: 2em;
+    padding-top: 1em;
+    margin: 0px auto 0px 60px;
+    
+}
+.NewsTitle{
+    border-bottom: 1px solid gray;
+
+}
+.BodyContainer{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+
+
+}
+.SectionContainer {
+    width: 90%;
+    margin-right: 1rem;
+}
+.VerticalBanner{
+    background-color: darkslategray;
+    height: 600px;
+    width: 400px;
+
+}

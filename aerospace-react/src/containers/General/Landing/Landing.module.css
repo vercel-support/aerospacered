@@ -4,7 +4,7 @@
     background:     linear-gradient(
         rgba(0, 0, 0, 0.45), 
         rgba(0, 0, 0, 0.45)
-      ),url(../../static/images/Landings/Landing1.jpg); 
+      ),url(../../../static/images/Landings/Landing1.jpg); 
 }
 
 .arrow,
