@@ -34,7 +34,7 @@ class Project(models.Model):
     index       =   models.AutoField(primary_key=True, editable=False)
     title       =   models.CharField(blank=False, max_length=150,editable=True)
     body        =   models.TextField(blank=False, null=False, max_length=5000,editable=True)
-    start_date  =   models.DateTimeField(auto_now_add=True)
+    start_date  =   models.DateTimeField()
     img         =   models.ImageField(upload_to='projects/', blank=True, null=True)
     coordinator =   models.CharField(blank=False, max_length=150,editable=True)
     state       =   models.CharField(blank=False, max_length=50, choices=STATES, default="Planificación")

@@ -108,6 +108,7 @@ CORS_ORIGIN_WHITELIST = (
 
 #Mailing
 #Mail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_HOST_USER = 'admin@mecanica-espoch.com'
 EMAIL_HOST_PASSWORD = '_PatitoFeo@97'

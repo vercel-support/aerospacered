@@ -21,11 +21,12 @@ import University from '../../static/images/icons/university.svg'
 class JoinUs extends Component{
   state ={
     loading: true,
+    sent:false,
 
     name: '',
     subject: 'REA | Solicitud de ingreso',
     description: '',
-    area: '',
+    area: 'Aeroespacial',
     college: '',
     mail:''
     
@@ -36,14 +37,21 @@ class JoinUs extends Component{
     this.setState({loading:true});
 
     const data = {...this.state};
-    console.log(data);
     axios.post('https://127.0.1.1:8000/api/join_us/', data)
+    .then( response =>{
+      if(response.status === 200){
+        console.log('todo ok bro')
+      }
+    })
+    .catch(error => {
+      this.setState({loading:true});
+    })
+
   }
 
 
   onNameChange = e=>{
     this.setState({name: e.target.value});
-    console.log(this.state)
   };
   onDescriptionChange = e=>{
     this.setState({description: e.target.value});

@@ -12,10 +12,8 @@ from main.models import Article, Article_doc, Project
 from rest_framework.parsers import JSONParser 
 
 #Mailing
-from django.template.loader import render_to_string
 from django.template import loader
-from django.core.mail import EmailMessage
-
+from django.core.mail import EmailMultiAlternatives
 
 @api_view(['GET'])
 @permission_classes((permissions.AllowAny,))
@@ -35,11 +33,10 @@ def project_dispacher(request):
 @permission_classes((permissions.AllowAny,))
 def join_us(request):
     data = JSONParser().parse(request)
-    
     #Mailing
     subject = data['subject']
     from_email = 'admin@mecanica-espoch.com'
-    to_address = ['vicente.coronelr@icloud.com',]
+    to_address = ['sss.coronelr@ss.com',]
 
 
     html_message = loader.render_to_string('mail_html.html', {
@@ -49,13 +46,10 @@ def join_us(request):
         'email': data['mail'],
         'comments': data['description'],
     })
-
-    msg = EmailMessage(subject,html_message, from_email,to_address)
-    msg.content_subtype = 'html'
-    msg.send
-
-    print('enviado')
-    return Response('nice')
+    msg = EmailMultiAlternatives(subject,html_message, from_email,to_address)
+    msg.attach_alternative(html_message, "text/html")
+    msg.send()
+    return Response(data, status=200)
 
 
     

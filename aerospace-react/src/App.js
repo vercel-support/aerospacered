@@ -22,8 +22,7 @@ class App extends Component {
   //TODO Navbar controller
   handleScroll = (e) => {
     let top = window.pageYOffset || document.documentElement.scrollTop;
-    const h = window.innerHeight;
-    if (top > h) {
+    if (top > 350) {
       this.setState({ showNavBar: true });
     } else {
       this.setState({ showNavBar: false });
@@ -39,7 +38,7 @@ class App extends Component {
         {/* End Header */}
 
         {/* Landing */}
-        <Landing />
+        <Landing onScrollMethod={this.handleScroll} />
 
         {/* End Body */}
 
