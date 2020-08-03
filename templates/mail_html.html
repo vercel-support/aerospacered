@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Ingeniería Mecánica | Email Confirmation</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bodybox">
+<header>
+    <h1 style='display:block; text-align:center;' >Red Ecuatoriana Aeroespacial</h1>
+</header>
+<br>
+
+<main>
+    <h3 style='display:block; text-align:center;'>Petición de ingreso</h3>
+    {% autoescape off %}
+    Saludos,
+
+    La Red Ecuatoriana Aeroespacial ha recibido una nueva petición de ingreso mediante la el sitio web.AboutUs
+
+    <h4>Datos</h4>
+    <ul>
+        <li>Nombre: Vicente</li>
+        <li>Universidad: {{college}}</li>
+        <li>Equipo: {{team}}</li>
+        <li>Comentario: {{comments}}</li>
+
+    </ul>
+{% endautoescape %}
+</main>
+<div class="blankspace">
+
+</div>
+<footer>
+            <p> Mensaje enviado desde </p>
+             <a style='display:block; text-align:center;' href="https://www.mecanica-espoch.com/">https://wwww.mecanica-espoch.com</a>
+
+</footer>
+</div>
+</body>
+</html>

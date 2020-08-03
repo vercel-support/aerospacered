@@ -15,10 +15,10 @@ const MainContent = (props) =>{
             <div>
         
                 <Intro />
-                
                 <SlideShow/>
+               
                 <News/> 
-
+                
             </div>
 
         );

@@ -17,9 +17,10 @@
 }
 
 .projectContainer img{
-    max-height: 300px;
-    width: auto;
+    max-width: 450px;
+    height: auto;
     grid-area: p_img;
+
 
 }
 .projectContainer p{

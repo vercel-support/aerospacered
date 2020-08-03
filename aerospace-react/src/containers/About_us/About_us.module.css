@@ -1,0 +1,24 @@
+.AboutUs {
+    width: 95%;
+    padding: 2em;
+    padding-top: 1em;
+    margin: 0px auto 0px 60px;
+}
+.AboutUsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.AboutUsBody{
+width: 90%;}
+.AboutUsBody h4{
+    padding-top: 1em;
+    color: var(--font_h4);
+}
+.AboutUsBanner{
+    background-color: darkslategray;
+    width: 300px;
+    height: 600px;
+    min-width: 300px;
+    margin-left: 2em;
+}

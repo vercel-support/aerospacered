@@ -1,20 +1,69 @@
-import React from 'react';
+import React, {Component} from 'react';
+import axios from 'axios';
 
 import Project from './Project/Project';
+import Spinner from '../../components/spinner/spinner';
 //* CSS 
 import classes from './Projects.module.css';
 
-const Projects = (props) =>{
-    const proje= 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima sequi error asperiores non quo reiciendis? Expedita dolor, veritatis ducimus nihil voluptates, placeat hic vero amet voluptate quod, voluptatem quia? Commodi!'
+
+class Projects extends Component{
+    state ={
+        projects: [],
+        loading: true
+    }
+    
+    componentDidMount(){
+        this.setState({loading: true});
+        axios.get('https://127.0.1.1:8000/api/projects/')
+            .then(response => {
+                
+                this.setState({projects: response.data});
+                
+            })
+            .then( response =>{
+                this.setState({loading:false });
+            })
+            .catch(error => {
+                this.setState({loading:true});
+            })
+
+        
+    }
+    render(){
+
+        let projects = this.state.projects.map(project =>{
+            
+            return <Project 
+                    title={project.title}
+                    start_date={project.start_date}
+                    body={project.body} 
+                    img_url={project.img}
+                    coordinator={project.coordinator}
+                    state={project.state}
+                    partners={project.partners}
+                    key={project.index}
+                    />
+        });
+
+
+        if (this.state.loading){
+            projects = <div>
+                <Spinner /> 
+                <Spinner /> 
+                <Spinner /> 
+                
+                </div>;
+        }
     return(
         <div className={classes.ProjectsContainer}>
             <h2>Proyectos </h2>
-            <Project projectName={'Dron Multiprop'} projectBody={proje}/>
-            <Project projectName={'Canal de YouTube'} projectBody={proje}/>
 
+                {projects}
 
         </div>
 
     )
+    }
 }
 export default Projects;

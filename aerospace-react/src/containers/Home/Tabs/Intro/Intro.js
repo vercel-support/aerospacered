@@ -12,10 +12,9 @@ const intro = (props) =>{
         <React.Fragment>
             <div className={classes.IntroContainer}  >   
                 <h2 className={classes.Intro_Title}> Red Ecuatoriana <span> Aeroespacial </span> </h2>
-                <h3 className={classes.Intro_Label}> Investigaci'on y desarrollo</h3>
-                <p className={classes.IntroBody}> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore earum facilis laboriosam sunt doloribus ad nam perspiciatis, sed corporis ea consequuntur sequi quis minima quia qui, modi exercitationem. Ea.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore earum facilis laboriosam sunt doloribus ad nam perspiciatis, sed corporis ea consequuntur sequi quis minima quia qui, modi exercitationem. Ea.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore earum facilis laboriosam sunt doloribus ad nam perspiciatis, sed corporis ea consequuntur sequi quis minima quia qui, modi exercitationem. Ea.
+                <h3 className={classes.Intro_Label}> Investigación y desarrollo</h3>
+                <p className={classes.IntroBody}> 
+                La red ecuatoriana aeroespacial es un equipo motivado de investigación y desarrollo multidisciplinario, es decir, cubre las áreas de aeroespacial, karting, robótica y nano-materiales. Conformado en su mayoría por estudiantes y docentes de la Escuela Superior Politécnica de Chimborazo que trabaja de forma conjunta con el grupo de investigación GIDETER ESPOCH, es importante recalcar que la REA tiene acreditación y seguimiento por parte de la SENESCYT.
                 </p>
             </div>
         </React.Fragment>

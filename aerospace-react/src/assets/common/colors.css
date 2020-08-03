@@ -10,12 +10,12 @@
    --font_h1_span:      red;
    --font_h2:       #000;
    --font_h3:          #fff;
-   --font_h4:      #071013;
+   --font_h4:      red;
    --font_h5:          #000;
    --font_h6:          #071013;
    --font_p:            #071013;
    --font_a:          #fff;
-   --font_a_active:     red;
+   --font_a_active:     rgb(214, 29, 5);
    --font_danger:       #071013;
    --font_excla:#071013;
 
@@ -24,5 +24,8 @@
    --article_bg: darkgray;
    --announcement_bg: darkred;
    --intro_bg: rgb(255,255,255);
+   
+   --button_color:rgb(187, 26, 5);
+   --button_color_active:rgb(255, 30, 0);
 
 }

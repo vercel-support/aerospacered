@@ -2,9 +2,12 @@
     width: 100vw;
     height: 100vh;
     background:     linear-gradient(
-        rgba(0, 0, 0, 0.45), 
-        rgba(0, 0, 0, 0.45)
-      ),url(../../../static/images/Landings/Landing1.jpg); 
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.25)
+      ),url(../../../static/images/Landings/Landing2.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
 }
 
 .arrow,

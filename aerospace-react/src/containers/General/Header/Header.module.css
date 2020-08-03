@@ -8,7 +8,9 @@
     position: sticky;
     top: 0;
     width: 100vw;
-	float: left;
+    height: 5em;
+    float: left;
+    z-index: 90999;
 }
 .headerInActive {
 	background-color: transparent;

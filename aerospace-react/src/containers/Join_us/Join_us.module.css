@@ -1,0 +1,104 @@
+.JoinUs {
+    width: 95%;
+    padding: 2em;
+    padding-top: 1em;
+    margin: 0px auto 0px 60px;
+}
+.JoinUsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.JoinUsBody{
+width: 90%;}
+.JoinUsBody h4{
+    padding-top: 1em;
+    color: var(--font_h4);
+}
+.JoinUsBanner{
+    background-color: darkslategray;
+    width: 300px;
+    height: 600px;
+    min-width: 300px;
+    margin-left: 2em;
+}
+.JoinUsBody h5{
+    padding-left: 2em;
+}
+.JoinUsBody a{
+    color: var(--font_a_active)
+}
+
+.FormContainer{
+display: grid;
+grid-template-areas: 'name team'
+                     'college email'
+                     'comments comments'
+                     '. submit';
+padding:  2em;
+grid-row-gap:1.25em;
+}
+.FormContainer input::placeholder{
+    color: black;
+    opacity: 0.85;
+}
+.FormContainer textarea::placeholder{
+    color: black;
+    opacity: 0.85;
+}
+.FormContainer img{
+    height: 25px;
+    transform: translateY(5.5px);
+    padding-right: 0.5em;
+}
+.FormContainer input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid dimgray;
+    height: 30px;
+    padding: 10px;
+    width: 20em;
+}
+.FormContainer textarea{
+    height: 150px;
+    width: 100%;
+    padding: 1em;
+    border: 1px dimgray solid;
+}
+.NameContainer{
+    grid-area: name;
+}
+.TeamContainer{
+    grid-area: team;
+}
+.CollegeContainer{
+    grid-area: college;
+}
+.MailContainer{
+    grid-area: email;
+}
+.CommentsContainer{
+    grid-area: comments;
+}
+.SendButton{
+    grid-area: submit;
+    background: var(--button_color) ;
+    border: none;
+    color: white;
+    height: 40px;
+    width: 140px;
+    font-size: 1.2em;
+    justify-self: right;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0px 0px 24px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 24px -7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 24px -7px rgba(0,0,0,0.75);
+}
+.SendButton:hover{
+    
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 22px 17px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 22px 17px -19px rgba(0,0,0,0.75);
+    box-shadow: 0px 22px 17px -19px rgba(0,0,0,0.75);
+    background: var(--button_color_active) ;
+}

@@ -61,27 +61,22 @@ const Header = (props)=>{
             <div>
               <a className={classes.Link} href="/projects">
                 
-                Projects
-              </a>
-            </div>
-            <div>
-              <a className={classes.Link} href="https://github.com">
-               
-                Missions
-              </a>
-            </div>
-            <div>
-              <a className={classes.Link} href="https://github.com">
-                
-                Join us
+                Proyectos
               </a>
             </div>
             <div>
               <a className={classes.Link} href="/about_us">
             
-                About us
+                Sobre nosotros
               </a>
             </div>
+            <div>
+              <a className={classes.Link} href="/join_us">
+                
+                ¡Únete!
+              </a>
+            </div>
+
           </div>
         </div>
       </React.Fragment>

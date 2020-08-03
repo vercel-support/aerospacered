@@ -1,21 +1,21 @@
 import React from 'react';
-
+import ReactHtmlParser from 'react-html-parser'; 
 //* CSS 
 import classes from './Project.module.css';
 //* Image
-import img_test from '../../../static/images/Landings/Landing0.jpg'
-
+//* https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component 
 const Project = (props) =>{
+    let img_url = 'https://127.0.1.1:8000'+props.img_url;
     return(
         <div className={classes.projectContainer}>
-            <h3>{props.projectName} </h3>
-            <img src={img_test} alt={props.projectName}/>
-            <p>{props.projectBody}</p>
+            <h3>{props.title} </h3>
+            <img src={img_url} alt={props.title}/>
+            <p>{props.body}</p>
             <ul>
-                <li><span>Coordinador:</span> Vicente Coronels</li>
-                <li><span>Colaboradores:</span> <a href='www.espoch.edu.ec'> ESPOCH</a> & <a href='www.senescyt.gob.ec'> SENESCYT</a></li>
-                <li><span>Estado:</span>  En construcci'on</li>
-                <li><span>Fecha de inicio:</span>  27/04/2019</li>
+                <li><span>Coordinador:</span> {props.coordinator }</li>
+                <li><span>Colaboradores:</span> {ReactHtmlParser(props.partners)} </li>
+                <li><span>Estado:</span>  {props.state}</li>
+                <li><span>Fecha de inicio:</span>  {props.start_date}</li>
                 
             </ul>
         </div>
