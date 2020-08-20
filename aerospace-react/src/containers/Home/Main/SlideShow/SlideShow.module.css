@@ -54,6 +54,7 @@
 .QuoteContainer{
     color: white;
     padding: 2em;
+    padding-right: 0em;
     margin: auto;
 
 }
@@ -62,4 +63,60 @@
 }
 .QuoteContainer h3{
     text-align: right;
+    padding-top: 0.5em;
+}
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+    .SlideShowContainer {
+    
+        align-items: center;
+       padding: 1em;
+
+    }
+    .gif0{
+        width: 70%;
+        height: 80%;
+
+    }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .SlideShowContainer {
+        height: 15.25em;
+        align-items: center;
+       padding: 0.5em;
+
+    }
+    .gif0{
+        width: 60%;
+        height: 70%;
+
+    }
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 499px){
+    .SlideShowContainer {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+       padding: 1em 0.5em;
+
+    }
+    .gif0{
+        width: 100%;
+        height: 40%;
+
+    }
+    .QuoteContainer{
+        padding: 0.5em;
+    }
+    .QuoteContainer h4{
+        text-align: right;
+        font-size: 1em;
+    }
+    .QuoteContainer h3{
+        font-size: 0.85em;
+    }
 }

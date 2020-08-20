@@ -11,7 +11,7 @@
 }
 .AboutUsBody{
 width: 90%;}
-.AboutUsBody h4{
+.AboutUs h4{
     padding-top: 1em;
     color: var(--font_h4);
 }
@@ -19,6 +19,45 @@ width: 90%;}
     background-color: darkslategray;
     width: 300px;
     height: 600px;
-    min-width: 300px;
     margin-left: 2em;
+}
+
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+    .AboutUs {
+        width: 100%;
+        padding: 1.5em;
+        margin: 0px auto 0px 0px;
+    }
+    .AboutUsBody p{
+        padding: 1em ;
+    }
+    .AboutUsBanner{
+        background-color: darkslategray;
+        width: 275px;
+        height: 600px;
+        margin-left: 1.5em;
+    }
+
+        
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .AboutUs {
+        width: 100%;
+        padding: 1.5em;
+        margin: 0px auto 0px 0px;
+    }
+    .AboutUsBody p{
+        padding: 1em ;
+    }
+    .AboutUsBanner{
+display: none;
+    }
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 200px){
+    
 }

@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
+  margin-top: -5em;
 }
 
 .arrow,
@@ -54,4 +55,23 @@
     
     transform: translate(5px, 5px);
   }
+}
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){  
+  .arrow {
+
+    top: 75%;
+
+  }
+  
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 200px){
+    
 }

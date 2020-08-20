@@ -7,7 +7,7 @@
 .JoinUsContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .JoinUsBody{
 width: 90%;}
@@ -19,16 +19,19 @@ width: 90%;}
     background-color: darkslategray;
     width: 300px;
     height: 600px;
-    min-width: 300px;
     margin-left: 2em;
 }
 .JoinUsBody h5{
     padding-left: 2em;
+    font-weight: bold;
 }
 .JoinUsBody a{
-    color: var(--font_a_active)
+    color: var(--font_a_active);
+    font-weight: normal;
 }
-
+.FormWrapper{
+    min-height: 350px;
+}
 .FormContainer{
 display: grid;
 grid-template-areas: 'name team'
@@ -101,4 +104,71 @@ grid-row-gap:1.25em;
     -moz-box-shadow: 0px 22px 17px -19px rgba(0,0,0,0.75);
     box-shadow: 0px 22px 17px -19px rgba(0,0,0,0.75);
     background: var(--button_color_active) ;
+}
+
+.SentWrapper{
+    display: block;
+    margin-top: 2em ;
+}
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+
+.JoinUs {
+    width: 100%;
+    padding: 1em 0.5em 0em 0.75em;
+    margin: 0px auto 0px 0px;
+}
+.JoinUsBanner{
+    width: 275px;
+    min-width: 275px;
+    height: 600px;
+    margin-left: 1em;
+}
+.JoinUsBody{
+    width: 70%;}
+}
+.JoinUsBody p {
+    padding-left: 0.5em;
+    padding-top: 0.25em;
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .JoinUs {
+        width: 100%;
+        padding: 1em 0.5em 0em 0.75em;
+        margin: 0px auto 0px 0px;
+    }
+    .JoinUsBanner{
+        display: none;
+    }
+    .JoinUsBody{
+        width: 100%;
+    padding: 1em;
+    }
+    .JoinUsBody p {
+    padding: 1em;    
+}
+    .FormContainer{
+        display: grid;
+        grid-template-areas: 'name team'
+                             'college email'
+                             'comments comments'
+                             '. submit';
+        padding:  1.25em 0.5em;
+        grid-row-gap:1.5em;
+        }
+
+        .FormContainer input{
+            border: none;
+            background-color: transparent;
+            border-bottom: 1.5px solid dimgray;
+            height: 30px;
+            padding: 10px;
+            width: 12em;
+        }
+}
+/* TODO: Mobile version */
+@media only screen and (max-width: 200px){
+    
 }

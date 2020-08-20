@@ -9,7 +9,6 @@
     top: 0;
     width: 100vw;
     height: 5em;
-    float: left;
     z-index: 90999;
 }
 .headerInActive {
@@ -52,6 +51,7 @@
 .LogoImg{
     height: 100px;
     width: auto;
+    transition: all 0.25s ease-in-out 0s;
 
 }
 .LogoBrand{
@@ -74,7 +74,10 @@
     align-items: center;
     padding-right: 1em;
 }
+.active{
+    color: var(--font_a_active);
 
+}
 .Link{
 	padding: 10px;
 	text-shadow: none;
@@ -86,37 +89,7 @@
 	margin: 15px 25px;
     outline: none;
     text-decoration: none;
-}
-
-.Link::before,
-.Link::after {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: #fff;
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transform: translateY(-10px);
-	-moz-transform: translateY(-10px);
-	transform: translateY(-10px);
-}
-
-.Link::before {
-	top: 0;
-	-webkit-transform: translateY(-10px);
-	-moz-transform: translateY(-10px);
-	transform: translateY(-10px);
-}
-
-.Link::after {
-	bottom: 0;
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	transform: translateY(10px);
+    font-size: 0.95em;
 }
 
 .Link:hover,
@@ -125,12 +98,37 @@
     transition: color 0.2s linear;
 }
 
-.Link:hover::before,
-.Link:focus::before,
-.Link:hover::after,
-.Link:focus::after {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+    .LinkContainer{
+        flex-grow: 0;
+        padding-right: 0em;
+    }
+    .Link{
+        padding: 2px;
+        margin: 15px 24px;
+        outline: none;
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+    .LogoImg{
+        height: 90px;
+        width: auto;
+        transition: all 0.25s ease-in-out 0s;
+    
+    }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .HeaderNormal{
+        display: none;
+    }
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 499px){
+    .HeaderNormal{
+        display: none;
+    }
 }

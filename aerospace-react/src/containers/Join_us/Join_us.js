@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 import Spinner from '../../components/spinner/spinner';
+import Sent from '../../components/sent/Sent';
 
 //* CSS
 import classes from "./Join_us.module.css";
@@ -20,7 +21,7 @@ import University from '../../static/images/icons/university.svg'
 
 class JoinUs extends Component{
   state ={
-    loading: true,
+    loading: false,
     sent:false,
 
     name: '',
@@ -38,9 +39,10 @@ class JoinUs extends Component{
 
     const data = {...this.state};
     axios.post('https://127.0.1.1:8000/api/join_us/', data)
+    .then(this.setState({loading:true}))
     .then( response =>{
       if(response.status === 200){
-        console.log('todo ok bro')
+        this.setState({sent:true})
       }
     })
     .catch(error => {
@@ -116,8 +118,14 @@ class JoinUs extends Component{
 
       </form>;
 
-    if(!this.state.loading){
+    if(this.state.loading){
       form_section = <Spinner/>
+    }
+    if(this.state.sent){
+      form_section = 
+      <div className={classes.SentWrapper}>
+        <Sent text='¡Solicitud enviada!' sentVar={this.state.sent} />
+      </div>
     }
 
   return (
@@ -152,7 +160,7 @@ class JoinUs extends Component{
               Todos los miembros pertenecientes a la Red deben estar de acuerdo con los estatutos que la rigen. Además, trabajamos para el desarrollo 
               de las actividades en un entorno de cordialida y respetuo múto. 
             </p>
-            <h5>Documentaci'on: <a href={REA_Estatutos} download>Estatutos</a></h5>
+            <h5>Documentación: <a href={REA_Estatutos} download>Estatutos</a></h5>
           </div>
 
           <div>
@@ -161,9 +169,10 @@ class JoinUs extends Component{
               Y bien, ¿deseas formar parte de este ambicioso proyecto? Mediante el siguiente formulario puedes ponerte en contacto con nosotros
               una vez recibamos tu solicitud nos pondremos en contacto para una breve entrevista y una presentación formal de los proyectos.  
             </p>
-
-            {form_section}
-          
+            <div className={classes.FormWrapper}>
+              {form_section}
+            </div>
+         
           </div>
         </div>
         <div className={classes.JoinUsBanner}></div>

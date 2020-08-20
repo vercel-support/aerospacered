@@ -7,3 +7,26 @@
 .ProjectsContainer h1{
     color: dimgrey;
 }
+
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+    .ProjectsContainer {
+        width: 100%;
+        padding: 1em;
+        margin: 0px auto 0px 0px;
+    }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .ProjectsContainer {
+        width: 100%;
+        padding: 0.5em;
+        margin: 0px auto 0px 0px;
+    }
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 200px){
+    
+}

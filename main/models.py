@@ -45,3 +45,36 @@ class Project(models.Model):
         app_label = 'main'
     def __str__(self):
         return '%s Project: %s'%(self.index, self.title)
+
+
+
+
+
+LEGIONS = (
+    ('2019', "2019"),
+    ('2020', "2020"),
+    ('2021', "2021"),
+    ('2022', "2022"),
+    ('2023', "2023"),
+)
+
+class Member(models.Model):
+    index             =   models.AutoField(primary_key=True, editable=False)
+    name              =   models.CharField(blank=False, max_length=150,editable=True)
+    rol               =   models.CharField(blank=False, max_length=150,editable=True)
+    college           =   models.CharField(blank=False, max_length=150,editable=True)
+    description       =   models.TextField(blank=False, null=False, max_length=5000,editable=True)
+    mail              =   models.EmailField(blank=False, max_length=300)
+    member_link       =   models.CharField(blank=False, max_length=150,editable=True)
+    random_fact       =   models.CharField(blank=False, max_length=500, editable=True)
+    twitter_link      =   models.CharField(blank=False, max_length=150,editable=True)
+    research_link     =   models.CharField(blank=False, max_length=150,editable=True)
+    banco_ideas_link  =   models.CharField(blank=False, max_length=150,editable=True)
+    img               =   models.ImageField(upload_to='members/', blank=False, null=True)
+    legion            =   models.CharField(blank=False, max_length=50, choices=LEGIONS, default="2020")
+
+    class Meta:
+        ordering: ['-index']
+        app_label = 'main'
+    def __str__(self):
+        return '%s Member: %s'%(self.index, self.name)

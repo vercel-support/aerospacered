@@ -64,3 +64,58 @@
     display: block;
     margin: auto;
 }
+
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .Footer{
+        margin-top: 2em;
+        width: 100vw;
+        height: 8.5em;
+        background: url('../../../static/images/footer/bg0.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 48%;
+    
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-end;
+    
+    }
+    .SocialMediaContainer{
+        width: 80vw;
+        padding: 1em;
+    }
+    .SocialMediaContainer img{
+        height: 45px;
+        padding: 0.5em;
+    }
+    .aerospace_logo {
+        height: 125px;
+        display: block;
+        margin: auto;
+    }
+    .CitationLink span{
+        font-size: 0.8em;
+        padding-right: 1em;
+    }
+    .CitationLink{
+        padding-left: 1em;    
+        width: 100vw;
+        height: 2em;
+        background-color: var(--citation_background);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 200px){
+    
+}

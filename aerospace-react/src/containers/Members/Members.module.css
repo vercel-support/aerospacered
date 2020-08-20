@@ -1,0 +1,28 @@
+.Gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1em;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    row-gap: 0px;
+    
+}
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+    .Gallery {
+        
+    }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 200px){
+    
+}

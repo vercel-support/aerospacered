@@ -1,7 +1,41 @@
 .Content {
     width: 100vw;
     min-height: 100vh;
-
+    background-color: var(--main_background);
+}
+.ContentWrapper{
+    width: 96vw;
+    margin:0px  auto;
+    margin-top: 1em;
     background-color: var(--body_background);
- 
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* TODO: Tablet version */
+@media only screen and (max-width: 1150px) and (min-width:800px){
+    .ContentWrapper{
+        margin-top: 0px;
+        border-radius: 0em;
+        width: 100vw;
+    }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .ContentWrapper{
+        margin-top: 0px;
+        border-radius: 0em;
+        width: 100vw;
+    }
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 499px){
+    .ContentWrapper{
+        margin-top: 0px;
+        border-radius: 0em;
+        width: 100vw;
+    }
 }

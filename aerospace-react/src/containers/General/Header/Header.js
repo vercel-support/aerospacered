@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import {  NavLink,  } from 'react-router-dom'  
 //* Containers
 import classes from "./Header.module.css";
 
@@ -11,6 +12,7 @@ const Header = (props)=>{
 
     const headerRef = useRef(null);
     const LogoBrandRef = useRef(null);
+    const LogoImgRef = useRef(null);
     let HeaderClasses = [classes.HeaderNormal];
     
     useEffect(() => {
@@ -18,11 +20,14 @@ const Header = (props)=>{
         headerRef.current.classList.add(classes.HeaderActive);
         headerRef.current.classList.remove(classes.headerInActive);
         LogoBrandRef.current.style.opacity = '1';
+        LogoImgRef.current.style.filter = 'invert(85%)';
+
 
         }else{
             headerRef.current.classList.remove(classes.HeaderActive);
             headerRef.current.classList.add(classes.headerInActive);
         LogoBrandRef.current.style.opacity = '0';
+        LogoImgRef.current.style.filter = 'invert(0%)';
         }
 
     },);
@@ -44,13 +49,15 @@ const Header = (props)=>{
     return (
       <React.Fragment>
         <div className={HeaderClasses.join(" ")} ref={headerRef}>
+ 
           <div className={classes.LogoContainer}>
-            <a href='/'>
+            <NavLink to='/'>
             <img
               src={REA_Logo}
               className={classes.LogoImg}
               alt="Red Ecuatoriana Aeroespacial\'s logo"
-            /></a>
+              ref={LogoImgRef}
+            /></NavLink>
             <h1 className={classes.LogoBrand} ref={LogoBrandRef}>
               Red Ecuatoriana
               <span className={classes.LogoSpan}> Aeroespacial </span>
@@ -59,22 +66,31 @@ const Header = (props)=>{
 
           <div className={classes.LinkContainer}>
             <div>
-              <a className={classes.Link} href="/projects">
+              <NavLink 
+                className={classes.Link} 
+                activeClassName={classes.active}
+                to="/projects">
                 
                 Proyectos
-              </a>
+              </NavLink>
             </div>
             <div>
-              <a className={classes.Link} href="/about_us">
+              <NavLink 
+              className={classes.Link} 
+              activeClassName={classes.active}
+              to="/about_us">
             
                 Sobre nosotros
-              </a>
+              </NavLink>
             </div>
             <div>
-              <a className={classes.Link} href="/join_us">
+              <NavLink 
+              className={classes.Link} 
+              activeClassName={classes.active}
+              to="/join_us">
                 
                 ¡Únete!
-              </a>
+              </NavLink>
             </div>
 
           </div>

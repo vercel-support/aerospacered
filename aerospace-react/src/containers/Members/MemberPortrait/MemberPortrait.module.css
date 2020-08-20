@@ -1,0 +1,98 @@
+.Gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1em;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    row-gap: 0px;
+    
+}
+.MemberSpace{
+    position: relative;
+    margin-top: -10px;
+}
+.MemberSpace:hover .MememberText{
+    opacity: 1;
+}
+
+.MemberSpace:hover  img{
+    filter: saturate(0%) brightness(35%);
+
+}
+.MememberText{
+    position: absolute;
+    bottom: 10%;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 999;
+    color: white;
+    line-height: 1;
+    padding-left: 0.5em ;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+.MememberText h5{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.MememberText h6{
+    font-size: 1.4em;
+    position: relative;
+}
+
+.MemberSpace img{
+    height: 400px;
+    width: 350px;
+    
+    filter: saturate(0%) brightness(80%);
+    transition: all 0.5s ease-in;
+}
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+    .MemberSpace img{
+        height: 350px;
+        width: 300px;
+        
+        filter: saturate(0%) brightness(45%);
+    }
+    .MememberText{
+        padding-left: 0.5em ;
+        opacity: 1;
+    
+    }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .MemberSpace img{
+        height: 225px;
+        width: 175px;
+        
+        filter: saturate(0%) brightness(45%);
+    }
+    .MememberText{
+        padding-left: 0.5em ;
+        opacity: 1;
+    }
+    .MememberText h5{
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .MememberText h6{
+        font-size: 1.1em;
+        position: relative;
+        padding-top: 0.25em;
+    }
+    
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 200px){
+    
+}

@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework import permissions
 # Create your views here.
 #Articles
-from main.serializers import ArticleSerializer, ProjectSerializer
+from main.serializers import *
 from main.models import Article, Article_doc, Project
 #Json
 from rest_framework.parsers import JSONParser 
@@ -28,6 +28,21 @@ def project_dispacher(request):
     project     = Project.objects.filter()
     serializer  = ProjectSerializer(project, many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+@permission_classes((permissions.AllowAny,))
+def members(request):
+    member     = Member.objects.filter()
+    serializer  = MemberSerializer(member, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+@permission_classes((permissions.AllowAny,))
+def member(request, user_name): 
+    member     = Member.objects.filter(member_link = user_name).get()
+    serializer  = MemberSerializer(member)
+    return Response(serializer.data)
+
 
 @api_view(['POST'])
 @permission_classes((permissions.AllowAny,))

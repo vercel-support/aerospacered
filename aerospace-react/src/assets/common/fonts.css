@@ -15,11 +15,99 @@
     --ms6: calc(var(--ratio) * var(--ms5)); /* 2.986 */
     --ms7: calc(var(--ratio) * var(--ms6)); /* 3.583 */
 
-    /*! Colors */
-
-
-
 }
+
+
+/* TODO: Tablet version */
+@media only screen and (max-width: 1150px) and (min-width:800px){
+  :root {
+
+    /*! Sizing */
+    --ratio: 1.1;
+    --base: 1.15;
+    --base-em: calc(var(--base) * 1em);
+    --base-px: calc(var(--base) * 14px);
+    --ms0: 1;
+    --ms1: var(--ratio);                    /* 1.2   */
+    --ms2: calc(var(--ratio) * var(--ms1)); /* 1.44  */
+    --ms3: calc(var(--ratio) * var(--ms2)); /* 1.728 */
+    --ms4: calc(var(--ratio) * var(--ms3)); /* 2.074 */
+    --ms5: calc(var(--ratio) * var(--ms4)); /* 2.488 */
+    --ms6: calc(var(--ratio) * var(--ms5)); /* 2.986 */
+    --ms7: calc(var(--ratio) * var(--ms6)); /* 3.583 */
+}
+h6 { font-size: calc(0.7*var(--base-em) / var(--ms1)); }
+h5 { font-size: calc(0.8var(--base-em) * var(--ms0)); }
+h4 { font-size: calc(var(--base-em) * var(--ms1)); }
+h3 { font-size: calc(0.6*var(--base-em) * var(--ms2));
+  font-weight: 300; }
+h2 { font-size: calc(1.1*var(--base-em) * var(--ms3));
+    line-height: calc(var(--base) * var(--ms1)); }
+h1 { font-size: calc(0.55*var(--base-em) * var(--ms4));
+    line-height: calc(var(--base) * var(--ms0)); }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+      :root {
+
+    /*! Sizing */
+    --ratio: 1.1;
+    --base: 1.07;
+    --base-em: calc(var(--base) * 1em);
+    --base-px: calc(var(--base) * 14px);
+    --ms0: 1;
+    --ms1: var(--ratio);                    /* 1.2   */
+    --ms2: calc(var(--ratio) * var(--ms1)); /* 1.44  */
+    --ms3: calc(var(--ratio) * var(--ms2)); /* 1.728 */
+    --ms4: calc(var(--ratio) * var(--ms3)); /* 2.074 */
+    --ms5: calc(var(--ratio) * var(--ms4)); /* 2.488 */
+    --ms6: calc(var(--ratio) * var(--ms5)); /* 2.986 */
+    --ms7: calc(var(--ratio) * var(--ms6)); /* 3.583 */
+}
+h6 { font-size: calc(0.7*var(--base-em) / var(--ms1)); }
+h5 { font-size: calc(0.8var(--base-em) * var(--ms0)); }
+h4 { font-size: calc(var(--base-em) * var(--ms1)); }
+h3 { font-size: calc(0.8*var(--base-em) * var(--ms2));
+  font-weight: 300; }
+h2 { font-size: calc(1.1*var(--base-em) * var(--ms3));
+    line-height: calc(var(--base) * var(--ms1)); }
+h1 { font-size: calc(0.55*var(--base-em) * var(--ms4));
+    line-height: calc(var(--base) * var(--ms0)); }
+}
+
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 499px){
+  :root {
+
+    /*! Sizing */
+    --ratio: 1.1;
+    --base: 1;
+    --base-em: calc(var(--base) * 1em);
+    --base-px: calc(var(--base) * 14px);
+    --ms0: 1;
+    --ms1: var(--ratio);                    /* 1.2   */
+    --ms2: calc(var(--ratio) * var(--ms1)); /* 1.44  */
+    --ms3: calc(var(--ratio) * var(--ms2)); /* 1.728 */
+    --ms4: calc(var(--ratio) * var(--ms3)); /* 2.074 */
+    --ms5: calc(var(--ratio) * var(--ms4)); /* 2.488 */
+    --ms6: calc(var(--ratio) * var(--ms5)); /* 2.986 */
+    --ms7: calc(var(--ratio) * var(--ms6)); /* 3.583 */
+}
+h6 { font-size: calc(0.7*var(--base-em) / var(--ms1)); }
+h5 { font-size: calc(0.8var(--base-em) * var(--ms0)); }
+h4 { font-size: calc(var(--base-em) * var(--ms1)); }
+h3 { font-size: calc(0.8*var(--base-em) * var(--ms2));
+  font-weight: 300; }
+h2 { font-size: calc(1.5*var(--base-em) * var(--ms3));
+    line-height: calc(var(--base) * var(--ms1)); }
+h1 { font-size: calc(0.55*var(--base-em) * var(--ms4));
+    line-height: calc(var(--base) * var(--ms0)); }
+}
+
+
+
 a{color: var(--font_a)}
 
 h1{color:var(--font_h1)}

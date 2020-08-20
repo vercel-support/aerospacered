@@ -7,14 +7,11 @@
 }
 .NewsTitle{
     border-bottom: 1px solid gray;
-
 }
 .BodyContainer{
     margin-top: 1em;
     display: flex;
     flex-direction: row;
-
-
 }
 .SectionContainer {
     width: 90%;
@@ -24,4 +21,62 @@
     height: 600px;
     width: 400px;
 
+}
+
+ /* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+    .NewsContainer {
+        width: 100%;
+        padding: 1em;
+        margin: 0px auto 0px 0px;
+        
+    }
+    .SectionContainer {
+        width: 100%;
+        margin-right: 1rem;
+    }
+    .VerticalBanner{
+        height: 600px;
+        width: 275px;
+    
+    }
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:500px){
+    .NewsContainer {
+        width: 100%;
+        padding: 1em;
+        margin: 0px auto 0px 0px;
+        
+    }
+    .SectionContainer {
+        width: 100%;
+        margin-right: 1rem;
+    }
+    .VerticalBanner{
+display: none;
+    }
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 499px){
+    .NewsContainer {
+        width: 100%;
+        padding: 0.5em;
+        margin: 0px auto 0px 0px;
+
+    }
+    .SectionContainer {
+        width: 100%;
+        margin-right: 0.5em;
+
+    }
+    .VerticalBanner{
+display: none;
+    }
+    .BodyContainer{
+        display: flex;
+        flex-direction: column;
+    }
 }

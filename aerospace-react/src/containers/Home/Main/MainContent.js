@@ -14,7 +14,7 @@ const MainContent = (props) =>{
 
             <div>
         
-                <Intro />
+                <Intro showLogo={props.showLogo}/>
                 <SlideShow/>
                
                 <News/> 
