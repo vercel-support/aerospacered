@@ -5,6 +5,7 @@ import { CSSTransition } from 'react-transition-group'
 //* JSX Containers
 import Layout from "./containers/General/Layout/Layout";
 import Header from "./containers/General/Header/Header";
+import MobileHeader from './containers/General/MobileHeader/MobileHeader';
 import Member from "./containers/Members/Member/Member";
 import Landing from "./containers/General/Landing/Landing";
 import MainContent from "./containers/Home/Main/MainContent";
@@ -13,11 +14,9 @@ import AboutUs from "./containers/About_us/About_us";
 import JoinUs from "./containers/Join_us/Join_us";
 import Footer from "./containers/General/Footer/Footer";
 
-import PageTransition from "./hoc/PageTransition/PageTransition";
 //* CSS
 //import classes from './assets/common/structure.module.css'
 import './index.css';
-import Spinner from "./components/spinner/spinner";
 
 
 
@@ -26,6 +25,7 @@ class App extends Component {
     showNavBar: false,
     showLanding: true,
     showPageTransition: false,
+    showMobileMenu:false, 
   };
 
   componentDidMount() {
@@ -49,6 +49,13 @@ class App extends Component {
     };
   };
 
+   //TODO MobileNavbar controller
+   mobilePanel = () =>{
+      this.setState({showMobileMenu: !this.state.showMobileMenu})
+   }
+   closeMobilePanel = () =>{
+      this.setState({showMobileMenu: false})
+   }
 
   PageHandler = ()=>{
     this.setState({showPageTransition: !this.state.showPageTransition});
@@ -64,10 +71,15 @@ class App extends Component {
     ) {
       var content = (
         <React.Fragment>
-          <Header showNavBar={this.state.showNavBar} />
-          <Landing onScrollMethod={this.handleScroll} />
+          <Header showNavBar={this.state.showNavBar} onScrollMethod={this.handleScroll}  />
+          <Landing 
+          onScrollMethod={this.handleScroll}
+          closeMobilePanel={this.closeMobilePanel} />
 
-          <Layout onScrollMethod={this.handleScroll} showNavBar={this.state.showNavBar} >
+          <Layout 
+            onScrollMethod={this.handleScroll} 
+            showNavBar={this.state.showNavBar} 
+            closeMobilePanel={this.closeMobilePanel}>
               <Route path="/about_us" exact >
                 {({ match }) => (
                 <CSSTransition
@@ -132,18 +144,20 @@ class App extends Component {
       );
     } else {
       content = (
-        <Layout>
+        <div>
           <Header showNavBar={true} />
           <Switch>
             <Route path="/Vicente_Coronel" exact component={Member} />
           </Switch>
-        </Layout>
+        </div>
       );
     }
     return (
       <React.Fragment>
         {/* Header */}
-
+        <MobileHeader 
+          lateralMenu={this.state.showMobileMenu}
+          panelController={this.mobilePanel} />
         {/* End Header */}
 
         {/* Page Transition */}

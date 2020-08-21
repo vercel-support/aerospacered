@@ -11,7 +11,7 @@ const AboutUs = (props) => {
 
   return (
     <div className={classes.AboutUs}>
-      <h2>Sobre nosotros </h2>
+      <h2>La Red </h2>
 
       <div className={classes.AboutUsContainer}>
         <div className={classes.AboutUsBody}>

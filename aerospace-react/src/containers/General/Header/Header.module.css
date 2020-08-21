@@ -62,7 +62,9 @@
 }
 
 .LogoSpan{
-    color:var(--font_h1_span)
+    color:var(--font_h1_span);
+    font-weight: bold;
+    font-size: 1.15em;
 }
 
 /*TODO Links */

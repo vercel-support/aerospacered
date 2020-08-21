@@ -36,27 +36,33 @@
 .SocialMediaContainer img:hover{
     transform: scale(1.15);
 }
+.FooterFoterWrapper{
+    height: auto;
+
+    padding: 0.5em;    
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    align-items: left;
+    justify-content: space-between;
+    row-gap: 0.5em;
+}
 
 .CitationLink{
     color:white;
-    bottom: 0;
-    padding-left: 3em;    
-    width: 100vw;
-    height: 1.5em;
+    font-size: 0.9em !important;
     background-color: var(--citation_background);
-    justify-self: last baseline;
-    position: relative;
 }
 .CitationLink a{
     color: var(--font_a_active);
     text-decoration: none;
 
 }
-.CitationLink span{
-
-    position: absolute;
-    right: 0;
-    padding-right: 1.5em;
+.Copyright{
+    color: white;
+    font-size: 0.7em !important;
+    font-weight: normal;
 }
 
 .aerospace_logo {
@@ -73,19 +79,8 @@
 /* TODO: XL Mobile version */
 @media only screen and (max-width: 799px) and (min-width:500px){
     .Footer{
-        margin-top: 2em;
-        width: 100vw;
         height: 8.5em;
-        background: url('../../../static/images/footer/bg0.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-y: 48%;
-    
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: flex-end;
-    
+        background-position-y: 48%;    
     }
     .SocialMediaContainer{
         width: 80vw;
@@ -100,22 +95,53 @@
         display: block;
         margin: auto;
     }
-    .CitationLink span{
+    .Copyright{
         font-size: 0.8em;
         padding-right: 1em;
     }
-    .CitationLink{
-        padding-left: 1em;    
-        width: 100vw;
-        height: 2em;
-        background-color: var(--citation_background);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    .FooterFoterWrapper{    
+        justify-content: space-evenly;
+        row-gap: 0.5em;
     }
+    
 }
 
 /* TODO: Mobile version */
-@media only screen and (max-width: 200px){
-    
+@media only screen and (max-width: 499px){
+    .Footer{
+        height: auto;
+        background-size: cover;
+        background-position-y: top;    
+    }
+    .SocialMediaContainer{
+        width: 80vw;
+        padding: 1em;
+        flex-wrap: wrap;
+    }
+    .SocialMediaContainer img{
+        height: 45px;
+        padding: 0.75em;
+        margin: 0.25em 0.35em;
+    }
+    .aerospace_logo {
+        height: 125px;
+        display: block;
+        margin: auto;
+    }
+    .Copyright {
+        font-size: 0.9em;
+        padding-right: 1em;
+    }
+    .FooterFoterWrapper{
+        height: auto;
+
+        padding: 0.5em;    
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: left;
+        justify-content: left;
+        row-gap: 0.5em;
+    }
 }

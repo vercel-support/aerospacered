@@ -100,9 +100,9 @@ h5 { font-size: calc(0.8var(--base-em) * var(--ms0)); }
 h4 { font-size: calc(var(--base-em) * var(--ms1)); }
 h3 { font-size: calc(0.8*var(--base-em) * var(--ms2));
   font-weight: 300; }
-h2 { font-size: calc(1.5*var(--base-em) * var(--ms3));
+h2 { font-size: calc(1.6*var(--base-em) * var(--ms3));
     line-height: calc(var(--base) * var(--ms1)); }
-h1 { font-size: calc(0.55*var(--base-em) * var(--ms4));
+h1 { font-size: calc(0.6*var(--base-em) * var(--ms4));
     line-height: calc(var(--base) * var(--ms0)); }
 }
 

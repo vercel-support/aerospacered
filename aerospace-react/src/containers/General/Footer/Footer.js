@@ -34,7 +34,10 @@ const Footer = (props) => {
 
       
     </div>
-    <h3 className={classes.CitationLink}> Desarrollado por: <a href="www.6268up.com"> &nbsp; 6268up </a> <span> @2020 Red Ecuatoriana Aeroespacial</span> </h3>
+    <div className={classes.FooterFoterWrapper}>
+    <h3 className={classes.CitationLink}> Desarrollado por: <a href="www.6268up.com"> &nbsp; 6268up </a> </h3> 
+    <span className={classes.Copyright}> @2020 Red Ecuatoriana Aeroespacial</span> 
+    </div>
     </React.Fragment>
 
   );

@@ -48,7 +48,10 @@ const Header = (props)=>{
 
     return (
       <React.Fragment>
-        <div className={HeaderClasses.join(" ")} ref={headerRef}>
+        <div className={HeaderClasses.join(" ")} ref={headerRef}
+                    onWheelCapture={props.onScrollMethod} 
+                    onKeyDownCapture={props.onScrollMethod}
+                    tabIndex='-1'>
  
           <div className={classes.LogoContainer}>
             <NavLink to='/'>

@@ -130,7 +130,7 @@ class JoinUs extends Component{
 
   return (
     <div className={classes.JoinUs}>
-      <h2>Inscripcioones </h2>
+      <h2>Inscripciones </h2>
 
       <div className={classes.JoinUsContainer}>
         <div className={classes.JoinUsBody}>

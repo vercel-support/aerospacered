@@ -106,6 +106,7 @@ b{
     transform: translateX(0.5em);
 
 } 
+
 /* TODO: Tablet version */
 @media only screen and (max-width: 1150px) and (min-width:800px){
     .MemberContainer img{
@@ -195,6 +196,58 @@ b{
 }
 
 /* TODO: Mobile version */
-@media only screen and (max-width: 200px){
-    
+@media only screen and (max-width: 499px){
+    .MemberContainer{
+        height: auto;
+        padding-bottom:2.5em ;
+    }
+    .ContentWrapper{
+        margin-top: 0.5em;
+        padding: 0.4em;
+        display: grid;
+        grid-template-areas: 'firstLine firstLine'    
+                             'MediaWrapper MediaWrapper'
+                             'description description'
+                             'dataList dataList';
+        column-gap: 0px;
+        height: auto;
+    }
+    .FirstLine{
+        grid-area: firstLine;
+    }
+    .PersonalInformation{
+        grid-area: description;
+    }
+    .PersonalInformationList{
+        grid-area: dataList;
+    }
+    .leftWrapper{
+        grid-area: MediaWrapper;
+        padding-top: 1.5em;
+    }
+    .MemberContainer img{
+        width: auto;
+        height: 200px;
+    }
+    .Name{
+        color: black;
+        font-weight: bold;
+        font-size: 2.2em;
+    }
+    .FirstLine h2{
+        font-size: 0.9em;
+    }
+    .ProfileInfo{
+        padding-left: 0.5em;
+        padding-right: .5em;
+        row-gap: 0.25em;
+    }
+
+    .MediaWrapper img{
+        height: 30px;
+        width: auto;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; 
+    }
 }

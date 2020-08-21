@@ -4,15 +4,16 @@ import React from 'react';
 import classes from './Layout.module.css';
 
 const layout = (props) => {
-    const scrollWin = ()=> {
-        window.scrollTo(0, window.innerHeight-100);
-      };
-      scrollWin();
+
     return(
 
     <React.Fragment>
  
-        <main className={classes.Content} onWheelCapture={props.onScrollMethod}  > 
+        <main className={classes.Content}  
+            onWheelCapture={props.onScrollMethod}  
+            onKeyDownCapture={props.onScrollMethod} 
+            onClick={props.closeMobilePanel}
+            tabIndex='-1'> 
             <div className={classes.ContentWrapper}>
                 {props.children}
             </div>

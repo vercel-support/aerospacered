@@ -72,6 +72,10 @@
 }
 
 /* TODO: Mobile version */
-@media only screen and (max-width: 200px){
-    
+@media only screen and (max-width: 499px){
+  .arrow {
+
+    top: 70%;
+
+  }  
 }

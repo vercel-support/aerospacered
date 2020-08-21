@@ -96,6 +96,29 @@
 }
 
 /* TODO: Mobile version */
-@media only screen and (max-width: 200px){
-    
+@media only screen and (max-width: 499px){
+    .projectContainer{
+        padding: 0.5em;
+        display: grid;
+        grid-template-areas: 'p_title   '
+                            'p_img   '
+                            'p_body  '
+                            'p_coord';
+        
+        width: 100%;
+        margin: auto;
+        border-bottom: 1px solid darkslategray;
+        align-items: center;
+        
+    }
+    .projectContainer img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+        padding: 1em;
+    }
+    .projectContainer h3{
+        font-size: 1.3em;
+    }
 }

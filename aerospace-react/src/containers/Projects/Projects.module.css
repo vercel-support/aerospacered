@@ -27,6 +27,13 @@
 }
 
 /* TODO: Mobile version */
-@media only screen and (max-width: 200px){
-    
+@media only screen and (max-width: 499px){
+    .ProjectsContainer {
+        width: 100%;
+        padding: 0.5em;
+        margin: 0px auto 0px 0px;
+    }
+    .ProjectsContainer h2{
+    font-size: 1.65em;
+    }
 }

@@ -58,6 +58,16 @@ display: none;
 }
 
 /* TODO: Mobile version */
-@media only screen and (max-width: 200px){
-    
+@media only screen and (max-width: 499px){
+    .AboutUs {
+        width: 100%;
+        padding: 1em;
+        margin: 0px auto 0px 0px;
+    }
+    .AboutUsBody p{
+        padding: 0.5em ;
+    }
+    .AboutUsBanner{
+display: none;
+    }
 }

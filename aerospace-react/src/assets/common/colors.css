@@ -1,5 +1,8 @@
 :root {
     --main_background:     #071013;
+    --header_background:         #1e1e1f;
+    --Mobileheader_background:         #000000;
+    --MobileHeaderMenu_background: rgb(214, 29, 5);
     --body_background:          white;
     --spec_background:       #010202;
     --foter_background:      whitesmoke;

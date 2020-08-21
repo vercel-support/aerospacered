@@ -140,10 +140,6 @@
     .logo{
         width: 200px;
         height: auto;
-    }
-}
-@media only screen and (max-width: 230px){
-    .logo{
-        margin-left: -1em;
+        align-self: center;
     }
 }
