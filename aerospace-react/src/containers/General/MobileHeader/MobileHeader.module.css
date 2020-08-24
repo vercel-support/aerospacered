@@ -29,6 +29,7 @@
  .LogoContainer img{
     height: 70px;
     width: auto;
+    filter: invert(100%);
  }
 
  .MenuButton {

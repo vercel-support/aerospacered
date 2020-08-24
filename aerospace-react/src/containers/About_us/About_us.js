@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import Members from '../Members/Members';
 
@@ -8,6 +8,14 @@ import classes from "./About_us.module.css";
 
 const AboutUs = (props) => {
 
+  useEffect(() => {
+    document.body.scrollTop = window.innerHeight-60; // For Safari
+    document.documentElement.scrollTop = window.innerHeight-60;
+    console.log('Moving')
+    return () => {
+        
+    };
+}, [props.hasChanged]);
 
   return (
     <div className={classes.AboutUs}>

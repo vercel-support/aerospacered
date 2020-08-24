@@ -141,5 +141,7 @@
         width: 200px;
         height: auto;
         align-self: center;
+        opacity: 1;
+        transform: translateY(0%)scale(1);
     }
 }

@@ -14,10 +14,10 @@ const MainContent = (props) =>{
 
             <div>
         
-                <Intro showLogo={props.showLogo}/>
-                <SlideShow/>
+                <Intro showLogo={props.showLogo} language={props.language}/>
+                <SlideShow language={props.language} />
                
-                <News/> 
+                <News language={props.language} /> 
                 
             </div>
 

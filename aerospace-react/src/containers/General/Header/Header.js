@@ -42,10 +42,6 @@ const Header = (props)=>{
 
     // }
     
-  
-
-    
-
     return (
       <React.Fragment>
         <div className={HeaderClasses.join(" ")} ref={headerRef}
@@ -54,7 +50,7 @@ const Header = (props)=>{
                     tabIndex='-1'>
  
           <div className={classes.LogoContainer}>
-            <NavLink to='/'>
+            <NavLink to='/' onClick={props.switchPage}>
             <img
               src={REA_Logo}
               className={classes.LogoImg}
@@ -72,28 +68,43 @@ const Header = (props)=>{
               <NavLink 
                 className={classes.Link} 
                 activeClassName={classes.active}
-                to="/projects">
+                to="/projects"
+                onClick={props.switchPage}>
                 
-                Proyectos
+                  {(props.language === 'es') ? 'Proyectos':'Projects'}
+                
+                
               </NavLink>
             </div>
             <div>
               <NavLink 
               className={classes.Link} 
               activeClassName={classes.active}
-              to="/about_us">
-            
-                Sobre nosotros
+              to="/about_us"
+              onClick={props.switchPage}>
+                              {(props.language === 'es') ? 'Sobre nosotros':'About us'}
+
+                
               </NavLink>
             </div>
             <div>
               <NavLink 
               className={classes.Link} 
               activeClassName={classes.active}
-              to="/join_us">
+              to="/join_us"
+              onClick={props.switchPage}>
+                  {(props.language === 'es') ? '¡Únete!':'Join us'}
                 
-                ¡Únete!
+                
               </NavLink>
+            </div>
+            <div>
+              <a 
+              className={classes.Link} 
+              onClick={props.switchLanguage}>
+                
+                  {(props.language === 'es') ? 'ES':'EN'}
+              </a>
             </div>
 
           </div>

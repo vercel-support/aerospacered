@@ -6,14 +6,16 @@ import Spinner from '../../components/spinner/spinner';
 //* CSS 
 import classes from './Projects.module.css';
 
-
 class Projects extends Component{
     state ={
         projects: [],
         loading: true
     }
+
     
     componentDidMount(){
+        document.body.scrollTop = window.innerHeight-60; // For Safari
+        document.documentElement.scrollTop = window.innerHeight-60;
         this.setState({loading: true});
         axios.get('https://127.0.1.1:8000/api/projects/')
             .then(response => {

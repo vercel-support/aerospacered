@@ -26,6 +26,9 @@ class App extends Component {
     showLanding: true,
     showPageTransition: false,
     showMobileMenu:false, 
+    hasChanged: false,
+    language: 'es',
+
   };
 
   componentDidMount() {
@@ -48,6 +51,11 @@ class App extends Component {
       this.setState({ showNavBar: false });
     };
   };
+  //TODO Reset scroll when scroll downs
+  switchPage = ()=>{
+    this.setState({ hasChanged: !this.state.hasChanged });
+    this.setState({ showNavBar: true });
+  }
 
    //TODO MobileNavbar controller
    mobilePanel = () =>{
@@ -61,6 +69,17 @@ class App extends Component {
     this.setState({showPageTransition: !this.state.showPageTransition});
   }
 
+  //TODO Language controller
+  switchLanguage = (e) =>{
+    e.preventDefault();
+    if (this.state.language === 'en') {
+      this.setState({language: 'es'})
+    }else{
+      this.setState({language: 'en'})
+    };
+    console.log(this.state.language);
+  }
+
 
   render() {
     if (
@@ -71,15 +90,22 @@ class App extends Component {
     ) {
       var content = (
         <React.Fragment>
-          <Header showNavBar={this.state.showNavBar} onScrollMethod={this.handleScroll}  />
+          <Header 
+            showNavBar={this.state.showNavBar} 
+            onScrollMethod={this.handleScroll}  
+            switchPage={this.switchPage}
+            language={this.state.language}
+            switchLanguage = {this.switchLanguage} />
           <Landing 
           onScrollMethod={this.handleScroll}
-          closeMobilePanel={this.closeMobilePanel} />
+          closeMobilePanel={this.closeMobilePanel}
+          language={this.state.language} />
 
           <Layout 
             onScrollMethod={this.handleScroll} 
             showNavBar={this.state.showNavBar} 
-            closeMobilePanel={this.closeMobilePanel}>
+            closeMobilePanel={this.closeMobilePanel}
+            >
               <Route path="/about_us" exact >
                 {({ match }) => (
                 <CSSTransition
@@ -89,7 +115,7 @@ class App extends Component {
                   unmountOnExit
                 >
                   <div className="page">
-                    <AboutUs />
+                    <AboutUs hasChanged={this.state.hasChanged} language={this.state.language} />
                   </div>
                 </CSSTransition>
               )}
@@ -104,7 +130,7 @@ class App extends Component {
                   
                 >
                   <div className="page">
-                    <JoinUs />
+                    <JoinUs hasChanged={this.state.hasChanged} language={this.state.language} />
                   </div>
                 </CSSTransition>
               )}
@@ -119,7 +145,7 @@ class App extends Component {
                   
                 >
                   <div className="page">
-                    <Projects />
+                    <Projects hasChanged={this.state.hasChanged} language={this.state.language} />
                   </div>
                 </CSSTransition>
               )}
@@ -134,7 +160,7 @@ class App extends Component {
                   
                 >
                   <div className="page">
-                  <MainContent showLogo={this.state.showNavBar} />
+                  <MainContent showLogo={this.state.showNavBar} hasChanged={this.state.hasChanged} language={this.state.language} />
                   </div>
                 </CSSTransition>
               )}

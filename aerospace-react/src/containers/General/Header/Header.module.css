@@ -8,7 +8,7 @@
     position: sticky;
     top: 0;
     width: 100vw;
-    height: 5em;
+    height: 4.5em;
     z-index: 90999;
 }
 .headerInActive {
@@ -16,12 +16,13 @@
 }
 .HeaderActive{
 	
-	background: linear-gradient(56deg, #1a1a1a, #090909);
+	background: linear-gradient(56deg, #1a1a1af6, #090909f6);
     background-size: 400% 400%;
 
     -webkit-animation: AnimationName 14s ease infinite;
     -moz-animation: AnimationName 14s ease infinite;
     animation: AnimationName 14s ease infinite;
+
 }
 
 @-webkit-keyframes AnimationName {

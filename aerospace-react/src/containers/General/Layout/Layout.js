@@ -3,7 +3,18 @@ import React from 'react';
 //* CSS
 import classes from './Layout.module.css';
 
-const layout = (props) => {
+const Layout = (props) => {
+
+
+    // useEffect(() => {
+    //     document.body.scrollTop = window.innerHeight-60; // For Safari
+    //     document.documentElement.scrollTop = window.innerHeight-60;
+    //     console.log('Moving')
+    //     return () => {
+            
+    //     };
+    // }, [props.hasChanged]);
+
 
     return(
 
@@ -22,4 +33,4 @@ const layout = (props) => {
     )
     };
 
-export default layout;
+export default Layout;
