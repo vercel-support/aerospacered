@@ -51,6 +51,7 @@ class App extends Component {
       this.setState({ showNavBar: false });
     };
   };
+
   //TODO Reset scroll when scroll downs
   switchPage = ()=>{
     this.setState({ hasChanged: !this.state.hasChanged });
@@ -82,6 +83,7 @@ class App extends Component {
 
 
   render() {
+    
     if (
       this.props.location.pathname === "/about_us" ||
       this.props.location.pathname === "/join_us" ||
@@ -193,7 +195,7 @@ class App extends Component {
         {/* End Members */}
         {content}
 
-        <Footer />
+        <Footer language={this.state.language} />
       </React.Fragment>
     );
   }

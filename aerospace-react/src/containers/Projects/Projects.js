@@ -37,14 +37,18 @@ class Projects extends Component{
         let projects = this.state.projects.map(project =>{
             
             return <Project 
-                    title={project.title}
+                    titleES={project.titleES}
+                    titleEN={project.titleEN}
                     start_date={project.start_date}
-                    body={project.body} 
+                    bodyES={project.bodyES} 
+                    bodyEN={project.bodyEN} 
                     img_url={project.img}
                     coordinator={project.coordinator}
-                    state={project.state}
+                    stateES={project.stateES}
+                    stateEN={project.stateEN}
                     partners={project.partners}
                     key={project.index}
+                    language={this.props.language}
                     />
         });
 
@@ -52,14 +56,16 @@ class Projects extends Component{
         if (this.state.loading){
             projects = <div>
                 <Spinner /> 
+                <br/>
                 <Spinner /> 
+                <br/>
                 <Spinner /> 
                 
                 </div>;
         }
     return(
         <div className={classes.ProjectsContainer}>
-            <h2>Proyectos </h2>
+            <h2>{(this.props.language === 'es') ? 'Proyectos':'Projects'} </h2>
 
                 {projects}
 

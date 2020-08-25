@@ -100,7 +100,7 @@ const Header = (props)=>{
             </div>
             <div>
               <a 
-              className={classes.Link} 
+              className={classes.LanguageSelector} 
               onClick={props.switchLanguage}>
                 
                   {(props.language === 'es') ? 'ES':'EN'}

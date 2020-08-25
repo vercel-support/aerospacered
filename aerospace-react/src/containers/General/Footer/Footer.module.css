@@ -38,20 +38,19 @@
 }
 .FooterFoterWrapper{
     height: auto;
-
     padding: 0.5em;    
     width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: no-wrap;
-    align-items: left;
+    align-items: center;
     justify-content: space-between;
     row-gap: 0.5em;
 }
 
 .CitationLink{
     color:white;
-    font-size: 0.9em !important;
+    font-size: 1em !important;
     background-color: var(--citation_background);
 }
 .CitationLink a{
@@ -63,6 +62,7 @@
     color: white;
     font-size: 0.7em !important;
     font-weight: normal;
+    padding-right: 1em;
 }
 
 .aerospace_logo {

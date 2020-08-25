@@ -37,10 +37,12 @@ class Members extends Component{
         let members = this.state.members.map(member =>{
             return <MemberPortrait 
                     name={member.name}
-                    rol={member.rol}
+                    rolES={member.rolES}
+                    rolEN={member.rolEN}
                     member_link={member.member_link} 
                     img_url = {member.img}
                     key={member.index}
+                    language={this.props.language}
                     />
         });
         

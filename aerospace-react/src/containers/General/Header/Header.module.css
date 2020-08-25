@@ -94,6 +94,20 @@
     text-decoration: none;
     font-size: 0.95em;
 }
+.LanguageSelector{
+    padding: 10px;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+    transition: color 0.3s;
+    position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+    font-size: 0.95em;
+    cursor: pointer;
+}
 
 .Link:hover,
 .Link:focus {

@@ -4,11 +4,12 @@
     background:     linear-gradient(
         rgba(0, 0, 0, 0.2), 
         rgba(0, 0, 0, 0.25)
-      ),url(../../../static/images/Landings/Landing2.jpg); 
+      ),url(../../../static/images/Landings/Landing3.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
   margin-top: -5em;
+  position: relative;
 }
 
 .arrow,
@@ -43,6 +44,54 @@
   animation-iteration-count: infinite;
   animation-name: arrow;
 }
+
+
+.LeftCornerText{
+  position: absolute;
+  left: 0px;
+  bottom: 10%;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+.textContainer{
+  position: relative;
+  display: inline-block;
+}
+.textContainer span{
+  display: inline-block;
+}
+.firstline{
+  color: white;
+}
+.secondline{
+  color: var(--font_a_active); 
+}
+
+.firstlineback{
+  color: white;
+  margin-left: 1.5em;
+
+}
+.secondlineback{
+  color: white; 
+  margin-left: 1.5em;
+
+}
+
+
+
+.RightCornerText{
+  position: absolute;
+  right: 1em;
+  bottom: 2.5%;
+  color: white;
+  font-size: 0.8em;
+
+}
+.RightCornerText a{
+  color: gray;
+}
+
 
 @keyframes arrow {
   0% {

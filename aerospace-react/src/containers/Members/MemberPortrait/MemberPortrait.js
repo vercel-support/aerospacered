@@ -13,7 +13,11 @@ const MemberPortrait = (props) => {
         <a href={member_link}>
         <div className={classes.MememberText}> 
             <h5> {props.name} </h5>
-            <h6> {props.rol}</h6>
+            <h6> {
+                          props.language === "es"
+                          ? props.rolES
+                          : props.rolEN
+            }</h6>
         </div>
         <img src={img_url} alt={props.name}/>
         </a>
