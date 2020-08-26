@@ -28,6 +28,7 @@ class App extends Component {
     showMobileMenu:false, 
     hasChanged: false,
     language: 'es',
+    languageHasChanged: false,
 
   };
 
@@ -73,12 +74,12 @@ class App extends Component {
   //TODO Language controller
   switchLanguage = (e) =>{
     e.preventDefault();
+    this.setState({languageHasChanged: !this.state.languageHasChanged});
     if (this.state.language === 'en') {
       this.setState({language: 'es'})
     }else{
       this.setState({language: 'en'})
     };
-    console.log(this.state.language);
   }
 
 
@@ -97,11 +98,14 @@ class App extends Component {
             onScrollMethod={this.handleScroll}  
             switchPage={this.switchPage}
             language={this.state.language}
-            switchLanguage = {this.switchLanguage} />
+            switchLanguage = {this.switchLanguage} 
+            languageHasChanged={this.state.languageHasChanged}/>
           <Landing 
           onScrollMethod={this.handleScroll}
           closeMobilePanel={this.closeMobilePanel}
-          language={this.state.language} />
+          language={this.state.language} 
+          hasChanged={this.state.hasChanged}
+          />
 
           <Layout 
             onScrollMethod={this.handleScroll} 
@@ -185,7 +189,9 @@ class App extends Component {
         {/* Header */}
         <MobileHeader 
           lateralMenu={this.state.showMobileMenu}
-          panelController={this.mobilePanel} />
+          panelController={this.mobilePanel} 
+          language={this.state.language}
+          switchLanguage = {this.switchLanguage} />
         {/* End Header */}
 
         {/* Page Transition */}

@@ -1,0 +1,21 @@
+/*TODO  CSSTRANSITION NAV ELEMENTS */
+.transitionLink-enter{
+    opacity: 0;
+}
+
+  
+  .transitionLink-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+
+  }
+  
+  .transitionLink-exit {
+    opacity: 0;
+  }
+  
+  .transitionLink-exit-active {
+    opacity: 1;
+      transition: opacity 500ms;
+  }
+  

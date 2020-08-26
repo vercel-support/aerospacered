@@ -1,8 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import {  NavLink,  } from 'react-router-dom'  
-//* Containers
-import classes from "./Header.module.css";
+import {  NavLink,  } from 'react-router-dom';  
+import { CSSTransition } from 'react-transition-group';
 
+//* CSS
+import classes from "./Header.module.css";
+import './HeaderTransitions.css';
 //* Images
 import REA_Logo from '../../../static/images/REA_Logo.png'
 
@@ -65,6 +67,12 @@ const Header = (props)=>{
 
           <div className={classes.LinkContainer}>
             <div>
+            <CSSTransition
+                  in={props.languageHasChanged}
+                  timeout={500}
+                  classNames='transitionLink'
+                  unmountOnEnter 
+                >
               <NavLink 
                 className={classes.Link} 
                 activeClassName={classes.active}
@@ -75,8 +83,16 @@ const Header = (props)=>{
                 
                 
               </NavLink>
+              </CSSTransition>
+
             </div>
             <div>
+            <CSSTransition
+                  in={props.languageHasChanged}
+                  timeout={500}
+                  classNames='transitionLink'
+                  unmountOnEnter 
+                >
               <NavLink 
               className={classes.Link} 
               activeClassName={classes.active}
@@ -86,8 +102,15 @@ const Header = (props)=>{
 
                 
               </NavLink>
+              </CSSTransition>
             </div>
             <div>
+            <CSSTransition
+                  in={props.languageHasChanged}
+                  timeout={500}
+                  classNames='transitionLink'
+                  unmountOnEnter 
+                >
               <NavLink 
               className={classes.Link} 
               activeClassName={classes.active}
@@ -97,14 +120,24 @@ const Header = (props)=>{
                 
                 
               </NavLink>
+              </CSSTransition>
             </div>
             <div>
-              <a 
+            <CSSTransition
+                  in={props.languageHasChanged}
+                  timeout={500}
+                  classNames='transitionLink'
+                  unmountOnEnter 
+                >
+              <div
               className={classes.LanguageSelector} 
-              onClick={props.switchLanguage}>
+              onClick={props.switchLanguage}
+              >
                 
                   {(props.language === 'es') ? 'ES':'EN'}
-              </a>
+              </div>
+              </CSSTransition>
+
             </div>
 
           </div>

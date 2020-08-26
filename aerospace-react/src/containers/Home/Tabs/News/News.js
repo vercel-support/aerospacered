@@ -68,7 +68,7 @@ class News extends Component{
                     </div>
 
                     <div className={styles.VerticalBanner}> 
-                    <div class="fb-page" data-href="https://www.facebook.com/aerospace.ec" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/aerospace.ec" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/aerospace.ec">Red Ecuatoriana Aeroespacial</a></blockquote></div>
+                    <div class="fb-page" data-href="https://www.facebook.com/aerospace.ec" data-tabs="timeline" data-width="" data-height="800px" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/aerospace.ec" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/aerospace.ec">Red Ecuatoriana Aeroespacial</a></blockquote></div>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,7 @@ const Header = (props)=>{
     const panelRef1 = useRef(null);
     const panelRef2 = useRef(null);
     const panelRef3 = useRef(null);
+    const panelRef4 = useRef(null);
 
     
     useEffect(() => {
@@ -24,6 +25,7 @@ const Header = (props)=>{
             panelRef1.current.style.transform = 'translateX(0px)';
             panelRef2.current.style.transform = 'translateX(0px)';
             panelRef3.current.style.transform = 'translateX(0px)';
+            panelRef4.current.style.transform = 'translateX(0px)';
             // panelRef.div.style.transform = 'translateX(-50px)';
         // LogoImgRef.current.style.filter = 'invert(85%)';
 
@@ -35,7 +37,9 @@ const Header = (props)=>{
             panelRef1.current.style.transform = 'translateX(-105%)';
             panelRef2.current.style.transform = 'translateX(-105%)';
             panelRef3.current.style.transform = 'translateX(-105%)';
-        //     headerRef.current.classList.add(classes.headerInActive);
+            panelRef4.current.style.transform = 'translateX(-105%)';
+
+            //     headerRef.current.classList.add(classes.headerInActive);
         // LogoBrandRef.current.style.opacity = '0';
         // LogoImgRef.current.style.filter = 'invert(0%)';
         }
@@ -83,7 +87,7 @@ const Header = (props)=>{
                 activeClassName={classes.active}
                 to="/">
                 
-                Inicio
+                {(props.language === 'es') ? 'Inicio':'Home'}
               </NavLink>
             </div>
             <div className={classes.LinkWrapper1}  ref={panelRef1}> 
@@ -92,8 +96,8 @@ const Header = (props)=>{
                 activeClassName={classes.active}
                 to="/projects">
                 
-                Proyectos
-              </NavLink>
+                {(props.language === 'es') ? 'Proyectos':'Projects'}
+                              </NavLink>
             </div>
             <div className={classes.LinkWrapper2}  ref={panelRef2}>
               <NavLink 
@@ -101,7 +105,7 @@ const Header = (props)=>{
               activeClassName={classes.active}
               to="/about_us">
             
-                Sobre nosotros
+            {(props.language === 'es') ? 'Sobre nosotros':'About us'}
               </NavLink>
             </div>
             <div className={classes.LinkWrapper3}  ref={panelRef3}>
@@ -110,10 +114,20 @@ const Header = (props)=>{
               activeClassName={classes.active}
               to="/join_us">
                 
-                ¡Únete!
+                {(props.language === 'es') ? '¡Únete!':'Join us'}
               </NavLink>
             </div>
             
+            <div className={classes.LinkWrapper4}  ref={panelRef4}>
+              <span 
+              className={classes.LinkLanguage} 
+              onClick={props.switchLanguage}
+
+              >
+                
+                {(props.language === 'es') ? 'Español':'English'}
+              </span>
+            </div>
 
           </div> 
 

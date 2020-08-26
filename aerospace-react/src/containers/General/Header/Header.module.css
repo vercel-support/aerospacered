@@ -16,7 +16,7 @@
 }
 .HeaderActive{
 	
-	background: linear-gradient(56deg, #1a1a1af6, #090909f6);
+	background: linear-gradient(56deg, #1a1a1afa, #090909fa);
     background-size: 400% 400%;
 
     -webkit-animation: AnimationName 14s ease infinite;
@@ -107,6 +107,7 @@
     text-decoration: none;
     font-size: 0.95em;
     cursor: pointer;
+    color: var(--font_a);
 }
 
 .Link:hover,
@@ -114,6 +115,10 @@
     color: var(--font_a_active);
     transition: color 0.2s linear;
 }
+
+
+
+
 
  /* TODO: Tablet version */
  @media only screen and (max-width: 1150px) and (min-width:800px){

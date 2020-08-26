@@ -11,13 +11,14 @@ const Landing = (props) => {
     const lastLineRef = useRef(null);
     const firstLineRefback = useRef(null);
     const lastLineRefback = useRef(null);
+
     useEffect(() => {
         //TODO Fordwards text
         anime.timeline({loop:false})
 
         .add({
             targets: firstLineRef.current,
-            translateX: [100, 500],
+            translateX: [100, 200],
             opacity:[1, 0],
             delay:1500,
             duration: 3500,
@@ -54,14 +55,11 @@ const Landing = (props) => {
             duration: 2500,
             easing: 'easeOutBack'
         });
-
         props.onScrollMethod();
-        return () => {
-            
-        };
-    }, []);
-    
 
+        return () => {
+
+        };    }, [props.hasChanged]);
     //TODO Left text animnation
 
 
@@ -82,15 +80,21 @@ const Landing = (props) => {
                         <div className={classes.arrow_bottom}></div>
                     </div>
                 </div>
-                <h6 className={classes.LeftCornerText}> <div className={classes.textContainer}><span ref={firstLineRef} className={classes.firstline}> We work </span> <span ref={lastLineRef} className={classes.secondline} style={{transform:'translateY(20px)',}}>on our future</span></div></h6>
-                <h6 className={classes.LeftCornerText}> <div className={classes.textContainer}><span ref={firstLineRefback} className={classes.firstlineback}> We design </span> <br/> <span ref={lastLineRefback} className={classes.secondlineback}  >We build</span></div></h6>
+                <h6 className={classes.LeftCornerText}> <div className={classes.textContainer}><span ref={firstLineRef} className={classes.firstline}> THE FUTURE </span> <span ref={lastLineRef} className={classes.secondline} style={{transform:'translateY(20px)',}}>IS NOW!</span></div></h6>
+                <h6 className={classes.LeftCornerText}> <div className={classes.textContainer}><span ref={firstLineRefback} className={classes.firstlineback}> Update this </span> <br/> <span ref={lastLineRefback} className={classes.secondlineback}  >Update this too</span></div></h6>
 
-                <span className={classes.RightCornerText}>Photo by <a href="https://unsplash.com/@multimaniaco?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">César Viteri</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+               
+
+                {(window.innerWidth < 500) ?  
+                <span className={classes.RightCornerText} >Photo by <a href="https://unsplash.com/@jdiegoph?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Diego PH</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+                :                 <span className={classes.RightCornerText} >Photo by <a href="https://unsplash.com/@asoggetti?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">asoggetti</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+}
             </div>
 
         );
     
 
 }
+
 
 export default Landing;

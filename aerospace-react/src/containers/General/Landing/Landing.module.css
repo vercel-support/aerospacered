@@ -10,6 +10,9 @@
   background-position-y: center;
   margin-top: -5em;
   position: relative;
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+
 }
 
 .arrow,
@@ -52,6 +55,7 @@
   bottom: 10%;
   font-size: 2.5em;
   font-weight: 900;
+
 }
 .textContainer{
   position: relative;
@@ -89,7 +93,7 @@
 
 }
 .RightCornerText a{
-  color: gray;
+  color: black;
 }
 
 
@@ -106,25 +110,107 @@
   }
 }
  /* TODO: Tablet version */
- @media only screen and (max-width: 1150px) and (min-width:800px){
+ @media only screen and (min-width:500px){
+  .LandingBackground{
+    width: 100vw;
+    height: 100vh;
+    background:     linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.25)
+      ),url(../../../static/images/Landings/Landing3.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  margin-top: -5em;
+  position: relative;
+}
+
 
 }
 
 /* TODO: XL Mobile version */
 @media only screen and (max-width: 799px) and (min-width:500px){  
   .arrow {
-
-    top: 75%;
-
+    top: 85%;
   }
+  .RightCornerText{
+    bottom: 5%;
+  }
+  .LeftCornerText{
+    left: -40px;
+    font-size: 2.25em;
+  }
+  .secondlineback{
+    margin-top: 0.75em;
   
+  }
 }
+
 
 /* TODO: Mobile version */
 @media only screen and (max-width: 499px){
-  .arrow {
+  .LandingBackground{
+    width: 100vw;
+    height: 100vh;
+    background:     linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.25)
+      ),url(../../../static/images/Landings/LandingMobile2.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  top: 85%;
+  margin: -0px 0 0 30%;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 4px #fff solid;
+  border-bottom: 4px #fff solid;
+}
 
-    top: 70%;
+.arrow:before {
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
 
-  }  
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}  
+  .RightCornerText{
+    bottom: 5%;
+    font-size: 0.6em;
+
+  }
+  .RightCornerText{
+    bottom: 5%;
+  }
+  .LeftCornerText{
+    left: -14.5%;
+    bottom: 12%;
+    font-size: 2em;
+    text-align: left;
+
+  }
+  .secondlineback{
+    margin-top: 0.75em;
+  
+  }
+}
+@media only screen and (max-width: 499px) and (min-width:300px){
+
+  .LeftCornerText{
+    left: -7.5%;
+
+
+  }
 }
