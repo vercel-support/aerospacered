@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Polyglot from "node-polyglot";
+import {Helmet} from 'react-helmet';
+
 
 import Spinner from "../../components/spinner/spinner";
 import Sent from "../../components/sent/Sent";
@@ -78,7 +80,10 @@ class JoinUs extends Component {
 
         'main.title':'Join us!',
         'main.team': 'The Team',
+        'team.body': 'The members that make up the Ecuadorian Aerospace Network play the role of teachers, professors and researchers. Working from various universities in Ecuador, they actively collaborate in the development of projects. If you are interested in participating, you can take a look at our work teams and get in touch with us!' ,
         'main.requirements': 'What are we looking for?',
+        'requirements.body':'Anyone can join the Network. We value any interest in promoting the development of aeronautics in the country! However, to be able to collaborate actively it is necessary to show skills in the engineering, electronics, agronomy or telecommunications areas. If you are interested in content generation, you can work with us in the field of graphic design or video production and editing.',
+
         'main.policies':'Policies',
         'main.form': 'Form',
 
@@ -86,9 +91,10 @@ class JoinUs extends Component {
         'team.teams': 'Teams',
 
         'policies.documentation': 'Documentation: ',
+        'policies.body': 'All members belonging to the Network must agree with the statutes that govern it. In addition, we work for the development of activities in a cordial and respectful environment.',
         'policies.regulations': 'Regulations',
 
-
+        'form.body':'Well, do you want to be part of this ambitious project? Using the following form you can contact us once we receive your request we will contact you for a brief interview and a formal presentation of the projects.',
 
 
         "form.name": "Name",
@@ -113,7 +119,12 @@ class JoinUs extends Component {
       phrases: {
         'main.title':'¡Únete!',
         'main.team': 'El Equipo',
+        'team.body': 'Los miembros que conforman la Red Ecuatoriana Aeroespacial desempeñan el rol de docentes, profesores e investigadores. Trabajando desde varias universidades de Ecuador, colaboran de forma activa en el desarrollo de los proyectos. Si te interesa participar, ¡puedes echarle un vistazo a nuestros equipos de trabajo y ponerte en contacto con nosotros!' ,
         'main.requirements': '¿Qué buscamos?',
+        'requirements.body':'Cualquier persona puede formar parte de la Red. ¡Valoramos cualquier interés en promover el desarrollo de la aeronáutica en el país! No obstante, para poder colaborar de forma activa es necesario mostrar aptitudes en el área ingenieril, electrónica, agronomía o telecomunicacciones. Si te interesa la generación de contenido, puedes trabajar con nosotros en el sector de diseño gráfico o producción y edición de videos.' ,
+
+
+        
         'main.policies':'Normativas',
         'main.form': 'Formulario',
 
@@ -122,7 +133,11 @@ class JoinUs extends Component {
         'team.teams': 'Equipos',
 
         'policies.documentation': 'Documentación: ',
+        'policies.body': 'Todos los miembros pertenecientes a la Red deben estar de acuerdo con los estatutos que la rigen. Además, trabajamos para el desarrollo de las actividades en un entorno de cordialida y respetuo múto.',
+
         'policies.regulations': 'Estatutos',
+
+        'form.body':'Y bien, ¿deseas formar parte de este ambicioso proyecto? Mediante el siguiente formulario puedes ponerte en contacto con nosotros una vez recibamos tu solicitud nos pondremos en contacto para una breve entrevista y una presentación formal de los proyectos.',
 
 
         "form.name": "Nombre y apellidos",
@@ -299,6 +314,15 @@ class JoinUs extends Component {
     }
 
     return (
+      <React.Fragment> 
+      <Helmet>
+        <title>
+          {(this.props.language === 'es') ? '¡Únete! | Red Ecuatoriana Aeroespacial':'Join us | Red Ecuatoriana Aeroespacial'}
+            </title>
+        
+        <meta name="description" content="¡Únete a la Red Ecuatoriana Aeroespacial! Este ambicioso proyecto requiere de la colaboración de docentes, investigadores y estudiantes pertenecientes a diferentes áreas."/>
+        <meta property="og:type" content="website"/>
+      </Helmet>
       <div className={classes.JoinUs}>
         <h2>{
               this.props.language === "es"
@@ -315,12 +339,12 @@ class JoinUs extends Component {
                 : polyglotEN.t("main.team")
             }</h4>
               <p>
-                Los miembros que conforman la Red Ecuatoriana Aeroespacial
-                desempeñan el rol de docentes, profesores e investigadores.
-                Trabajando desde varias universidades de Ecuador, colaboran de
-                forma activa en el desarrollo de los proyectos. Si te interesa
-                participar, ¡puedes echarle un vistazo a nuestros equipos de
-                trabajo y ponerte en contacto con nosotros!
+              {
+              this.props.language === "es"
+                ? polyglotES.t("team.body")
+                : polyglotEN.t("team.body")
+            }
+              
               </p>
               <h5>
               {
@@ -344,13 +368,11 @@ class JoinUs extends Component {
                 : polyglotEN.t("main.requirements")
             }</h4>
               <p>
-                Cualquier persona puede formar parte de la Red. ¡Valoramos
-                cualquier interés en promover el desarrollo de la aeronáutica en
-                el país! No obstante, para poder colaborar de forma activa es
-                necesario mostrar aptitudes en el área ingenieril, electrónica,
-                agronomía o telecomunicacciones. Si te interesa la generación de
-                contenido, puedes trabajar con nosotros en el sector de diseño
-                gráfico o producción y edición de videos.
+              {
+              this.props.language === "es"
+                ? polyglotES.t("requirements.body")
+                : polyglotEN.t("requirements.body")
+            }
               </p>
             </div>
 
@@ -361,10 +383,11 @@ class JoinUs extends Component {
                 : polyglotEN.t("main.policies")
             }</h4>
               <p>
-                Todos los miembros pertenecientes a la Red deben estar de
-                acuerdo con los estatutos que la rigen. Además, trabajamos para
-                el desarrollo de las actividades en un entorno de cordialida y
-                respetuo múto.
+              {
+              this.props.language === "es"
+                ? polyglotES.t("policies.body")
+                : polyglotEN.t("policies.body")
+            }
               </p>
               <h5>
               {
@@ -389,11 +412,11 @@ class JoinUs extends Component {
                 : polyglotEN.t("main.form")
             }</h4>
               <p>
-                Y bien, ¿deseas formar parte de este ambicioso proyecto?
-                Mediante el siguiente formulario puedes ponerte en contacto con
-                nosotros una vez recibamos tu solicitud nos pondremos en
-                contacto para una breve entrevista y una presentación formal de
-                los proyectos.
+              {
+              this.props.language === "es"
+                ? polyglotES.t("form.body")
+                : polyglotEN.t("form.body")
+            }
               </p>
               <div className={classes.FormWrapper}>{form_section}</div>
             </div>
@@ -403,6 +426,7 @@ class JoinUs extends Component {
         </div>
         
       </div>
+      </React.Fragment> 
     );
   }
 }

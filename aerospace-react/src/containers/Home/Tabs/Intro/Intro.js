@@ -28,6 +28,7 @@ const Intro = (props) =>{
         locale: 'en',
         phrases: {
             'intro.label':'Research and Development',
+            'intro.body': 'The Ecuadorian aerospace network is a motivated multidisciplinary research and development team, that is, it covers the areas of aerospace, karting, robotics and nano-materials. Made up mostly of students and teachers from the Escuela Superior Politécnica de Chimborazo who work jointly with the GIDETER ESPOCH research group, it is important to emphasize that the REA is accredited and monitored by SENESCYT'
                 }
 
     }

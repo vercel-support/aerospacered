@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import {Helmet} from 'react-helmet';
+
 
 //* CSS
 import classes from "./Member.module.css";
@@ -15,6 +17,8 @@ class Member extends Component{
   state = {
     loading:true,
     member:{},
+    title: '',
+    description: '',
 
   };
   // componentDidMount(){
@@ -29,7 +33,7 @@ class Member extends Component{
   //       this.setState({loading:true});
   //   })
   // }
-  
+    
 
   componentDidMount(){
     
@@ -37,11 +41,14 @@ class Member extends Component{
     axios.get('https://127.0.1.1:8000/api/member/' + this.props.location.pathname.substr(1))
     .then(response => {    
         this.setState({member: response.data});    
+
                   
     })
     .then( response =>{
         this.setState({loading:false });
-        
+        this.setState({title:this.state.member.name + ' | Red Ecuatoriana Aeroespacial' }); 
+        this.setState({description:this.state.member.name + " - "+this.state.member.description.slice(0,140)}); 
+     
     })
     .catch(error => {
         this.setState({loading:true});
@@ -51,8 +58,15 @@ class Member extends Component{
   }
 
   render(){
+
+    
   
   return (
+    <React.Fragment> 
+    <Helmet>
+      <title>{(this.props.language === 'es') ? this.state.title : this.state.title}</title>
+      <meta name="description" content={this.state.description}></meta>
+    </Helmet>
     <div className={classes.MemberContainer}>
 
 
@@ -89,6 +103,8 @@ class Member extends Component{
     </div>
       
     </div>
+    </React.Fragment> 
+
   );
   }
 };

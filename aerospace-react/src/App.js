@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group'
+import axios from 'axios';
 
 //* JSX Containers
 import Layout from "./containers/General/Layout/Layout";
@@ -29,6 +30,9 @@ class App extends Component {
     hasChanged: false,
     language: 'es',
     languageHasChanged: false,
+    requestLoading: true,
+    member_list: [],
+    
 
   };
 
@@ -41,6 +45,12 @@ class App extends Component {
     ) {
       this.setState({ showNavBar: true });
     }
+
+    axios.get('https://127.0.1.1:8000/api/member_list/')
+        .then(response => {
+            this.setState({member_list: response.data});
+            
+        });
   }
 
   //TODO Navbar controller
@@ -84,6 +94,10 @@ class App extends Component {
 
 
   render() {
+
+
+ 
+    let memberComponents = ''
     
     if (
       this.props.location.pathname === "/about_us" ||
@@ -175,14 +189,22 @@ class App extends Component {
         </React.Fragment>
       );
     } else {
-      content = (
+      
+      memberComponents = this.state.member_list.map(memberUser =>{
+        return <Route path={'/'+memberUser.member_link} component={Member} key={memberUser.name} />
+      })
+      
+        content = (
         <div>
           <Header showNavBar={true} />
           <Switch>
-            <Route path="/Vicente_Coronel" exact component={Member} />
+
+            {memberComponents}
+          
           </Switch>
         </div>
-      );
+      )
+      
     }
     return (
       <React.Fragment>

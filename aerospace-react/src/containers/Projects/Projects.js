@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Helmet} from 'react-helmet';
+
 
 import Project from './Project/Project';
 import Spinner from '../../components/spinner/spinner';
@@ -64,13 +66,22 @@ class Projects extends Component{
                 </div>;
         }
     return(
+        <React.Fragment> 
+        <Helmet>
+          <title>
+                {(this.props.language === 'es') ? 'Proyectos | Red Ecuatoriana Aeroespacial':'Projects | Red Ecuatoriana Aeroespacial'}
+          </title>
+          <meta name="description" content="Aeroespacial, robótica y nanomateriales son las áreas generales de trabajo. Entre nuestros proyectos están varios tipos de UAV y fabricación de aleaciones con grafeno"/>
+          <meta property="og:type" content="website"/>
+        
+        </Helmet>
         <div className={classes.ProjectsContainer}>
             <h2>{(this.props.language === 'es') ? 'Proyectos':'Projects'} </h2>
 
                 {projects}
 
         </div>
-
+        </React.Fragment> 
     )
     }
 }

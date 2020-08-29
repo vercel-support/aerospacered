@@ -58,7 +58,13 @@ class News extends Component{
 
         <React.Fragment >
             <div className={styles.NewsContainer}>
-                <h2 className={styles.NewsTitle}>Noticias</h2>
+                <h2 className={styles.NewsTitle}>
+
+                {(this.props.language === 'es') ? 
+                   "Noticias":
+                    "News"}
+                      
+                </h2>
                 
                 <div className={styles.BodyContainer}>
                     
