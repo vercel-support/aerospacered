@@ -16,9 +16,8 @@ width: 90%;}
     color: var(--font_h4);
 }
 .JoinUsBanner{
-    background-color: darkslategray;
-    width: 300px;
-    height: 600px;
+    width: auto;
+    height: auto;
     margin-left: 2em;
 }
 .JoinUsBody h5{

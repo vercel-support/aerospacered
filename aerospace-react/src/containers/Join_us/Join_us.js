@@ -20,6 +20,8 @@ import Mail from "../../static/images/icons/mail.svg";
 import Team from "../../static/images/icons/gear.svg";
 import University from "../../static/images/icons/university.svg";
 
+import Banner from '../../static/images/media/joinusBanner.png';
+
 class JoinUs extends Component {
   state = {
     loading: false,
@@ -435,7 +437,9 @@ class JoinUs extends Component {
               <div className={classes.FormWrapper}>{form_section}</div>
             </div>
           </div>
-          <div className={classes.JoinUsBanner}></div>
+          <div className={classes.JoinUsBanner}>
+            <img src={Banner} alt='Red Ecuatoriana Aeroespacial Banner'/>
+          </div>
          
         </div>
         
