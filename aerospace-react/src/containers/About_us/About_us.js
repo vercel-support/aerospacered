@@ -3,7 +3,7 @@ import Polyglot from 'node-polyglot';
 import {Helmet} from 'react-helmet';
 
 import Members from '../Members/Members';
-
+import BlackSlide from '../../components/BlackSlide/BlackSlide';
 //* CSS
 import classes from "./About_us.module.css";
 
@@ -73,8 +73,24 @@ const polyglotES = new Polyglot(phrasesES);
             {(props.language === 'es') ? 'Sobre nosotros | Red Ecuatoriana Aeroespacial':'About us | Red Ecuatoriana Aeroespacial'}
           </title>
 
-          <meta name="description" content="La Red Ecuatoriana Aeroespacial fue fundada el 2019 y reconocida legalmente por la Senescyt en 2020. Desde entonces se ha trabajado arduamente en los proyectos planteados."/>
           <meta property="og:type" content="website"/>
+<meta name="title" content="Sobre nosotros | Red Ecuatoriana Aeroespacial"/>
+<meta name="description" content="La Red Ecuatoriana Aeroespacial fue fundada el 2019 y reconocida legalmente por la Senescyt en 2020. Desde entonces se ha trabajado arduamente en los proyectos planteados."/>
+<link rel="icon" href="https://www.redaeroespacial.com/static/img/iconREA.ico" />
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
+<meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
+<meta property="og:description" content="La Red Ecuatoriana Aeroespacial fue fundada el 2019 y reconocida legalmente por la Senescyt en 2020. Desde entonces se ha trabajado arduamente en los proyectos planteados."/>
+<meta property="og:image" content="https://www.redaeroespacial.com/static/img/aerospace.jpg"/>
+
+<link rel="canonical" href="http://www.redaeroespacial.com" />
+<link rel="apple-touch-icon" href="https://www.redaeroespacial.com/static/img/aerospace.jpg" />
+  
+      
+      
+      
         </Helmet>
           <div className={classes.AboutUs}>
         <h2>{(props.language === 'es') ? polyglotES.t('main.title'):polyglotEN.t('main.title')} </h2>
@@ -89,7 +105,7 @@ const polyglotES = new Polyglot(phrasesES);
           {(props.language === 'es') ? polyglotES.t('history.body2'):polyglotEN.t('history.body2')} 
           
           </p>
-
+          <BlackSlide language={props.language} />
           <h4>{(props.language === 'es') ? polyglotES.t('main.universities'):polyglotEN.t('main.universities')} </h4>
           <p>
           {(props.language === 'es') ? polyglotES.t('universities.body'):polyglotEN.t('universities.body')} 
@@ -102,8 +118,8 @@ const polyglotES = new Polyglot(phrasesES);
 
           
         </div>
-        <div className={classes.AboutUsBanner}></div>
       </div>
+      
       <h4>{(props.language === 'es') ? polyglotES.t('main.members'):polyglotEN.t('main.members')} </h4>
       <Members language={props.language}/>
     </div>

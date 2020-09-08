@@ -19,13 +19,21 @@ from django.conf.urls import url
 from django.views.static import serve 
 from django.conf import settings 
 from django.conf.urls.static import static
-
+from django.views.generic.base import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     #Djagno REST
     path('', include('main.urls')),
+
+        #Robots.txt
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
+    #Sitemap.xml
+    path("sitemap.xml", TemplateView.as_view(template_name="sitemap.xml", content_type="text/plain")),
+
     # TODO: Path for data
     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+handler404 = 'main.views.handler404'
+handler500 = 'main.views.handler500'

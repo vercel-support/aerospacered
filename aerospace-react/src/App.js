@@ -35,23 +35,23 @@ class App extends Component {
     
 
   };
+  
+  // componentDidMount() {
+  //   if (
+  //     !this.props.location.pathname === "/about_us" ||
+  //     !this.props.location.pathname === "/join_us" ||
+  //     !this.props.location.pathname === "/projects" ||
+  //     !this.props.location.pathname === "/"
+  //   ) {
+  //     this.setState({ showNavBar: true });
+  //   }
 
-  componentDidMount() {
-    if (
-      !this.props.location.pathname === "/about_us" ||
-      !this.props.location.pathname === "/join_us" ||
-      !this.props.location.pathname === "/projects" ||
-      !this.props.location.pathname === "/"
-    ) {
-      this.setState({ showNavBar: true });
-    }
-
-    axios.get('https://127.0.1.1:8000/api/member_list/')
-        .then(response => {
-            this.setState({member_list: response.data});
+  //   axios.get('https://127.0.1.1:8000/api/member_list/')
+  //       .then(response => {
+  //           this.setState({member_list: response.data});
             
-        });
-  }
+  //       });
+  // }
 
   //TODO Navbar controller
   handleScroll = (e) => {

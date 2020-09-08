@@ -1,0 +1,57 @@
+To-Do List
+
+	Backend
+	________________________________________________
+		Sitemap
+		robot
+	
+	
+	SEO stage 0 (HTML tags)
+	________________________________________________
+
+		
+	
+	
+	Frontend
+	________________________________________________
+		--Helmet
+		--CSS Transition betwen tabs
+		--Home/Services icon animation
+		--Do you want to work with us?
+		--Contact form sent animation
+		--Update contact's form images
+		--Landing text
+		--Mobile version
+		--Services/E-commerce
+		--Style with box shadow to the header
+		Icon.ico 
+		
+	
+	Deploy
+	________________________________________________
+		Check if SEO web site images is working (SEO tags: image url)
+	
+	
+	
+	SEO stage 1 (Google Console, Analytics, etc)
+	________________________________________________
+
+
+
+/* TODO: Tablet version */
+ @media only screen and (max-width: 1150px) and (min-width:800px){
+ 
+
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (max-width: 799px) and (min-width:700px){
+
+
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 499px){
+
+
+}

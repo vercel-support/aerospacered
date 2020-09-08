@@ -66,5 +66,9 @@ def join_us(request):
     msg.send()
     return Response(data, status=200)
 
+#Error handlers
+def handler404(request, exception):
+    return render(request, '404.html', {'error_ind':'404'})
 
-    
+def handler500(request):
+    return render(request, '404.html', {'error_ind':'505'})

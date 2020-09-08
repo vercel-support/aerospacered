@@ -71,8 +71,21 @@ class Projects extends Component{
           <title>
                 {(this.props.language === 'es') ? 'Proyectos | Red Ecuatoriana Aeroespacial':'Projects | Red Ecuatoriana Aeroespacial'}
           </title>
-          <meta name="description" content="Aeroespacial, robótica y nanomateriales son las áreas generales de trabajo. Entre nuestros proyectos están varios tipos de UAV y fabricación de aleaciones con grafeno"/>
+      
           <meta property="og:type" content="website"/>
+<meta name="title" content="Proyectos | Red Ecuatoriana Aeroespacial"/>
+<meta name="description" content="Aeroespacial, robótica y nanomateriales son las áreas generales de trabajo. Entre nuestros proyectos están varios tipos de UAV y fabricación de aleaciones con grafeno."/>
+<link rel="icon" href="https://www.redaeroespacial.com/static/img/iconREA.ico" />
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
+<meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
+<meta property="og:description" content="Aeroespacial, robótica y nanomateriales son las áreas generales de trabajo. Entre nuestros proyectos están varios tipos de UAV y fabricación de aleaciones con grafeno."/>
+<meta property="og:image" content="https://www.redaeroespacial.com/static/img/aerospace.jpg"/>
+
+<link rel="canonical" href="http://www.redaeroespacial.com" />
+<link rel="apple-touch-icon" href="https://www.redaeroespacial.com/static/img/aerospace.jpg" />  
         
         </Helmet>
         <div className={classes.ProjectsContainer}>

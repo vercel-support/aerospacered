@@ -1,0 +1,187 @@
+.BlackSlideContainer{
+    position: relative;
+    margin: 2em 0px;
+}
+.BlackSlideContainer img{
+    position: absolute;
+    top: 40%;
+    height: 50px;
+    width: auto;
+    z-index: 99999;
+    border-radius: 2em;
+    transition: all 0.25s ease-in-out;
+}
+.BlackSlideWrapper{
+    width: 100% ;
+    background-color: rgb(10, 10, 10);
+    padding-left: 2.5%;
+    overflow-x: hidden;
+
+}
+.SliderController{
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: nowrap;
+    height: auto;
+    margin-right: auto;
+    
+}
+
+.LeftChevron{
+    left: -1.5em;
+    padding-right: 0.25em;
+    background-color: rgb(21, 21, 21);
+ 
+}
+.RightChevron{
+    right: -1.5em;
+    padding-left: 0.25em;
+    background-color: rgb(214, 29, 5);
+
+}
+
+.nYear{
+    display: flex;
+    flex-direction: column;
+
+}
+.SectionsWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    min-height: 150px;
+
+}
+.SectionsWrapper>section{
+    border-right: 1px solid gainsboro;
+    color: #fafafa;
+    padding: 0em 1em;
+    margin: 1em 0px;
+    min-width: 275px;
+    max-width: 300px;
+    text-align: left;
+}
+.SectionsWrapper>section:last-child{
+    border-color: rgb(56, 56, 56);
+    border-style: dotted;
+}
+.SectionsWrapper>section:hover img{
+    opacity: 1;
+}
+.SectionsWrapper>section h6{
+    color: rgb(214, 29, 5);
+    font-size: 1.05em;
+}
+.SectionsWrapper>section p{
+    font-size: 0.8em;
+    line-height: normal; 
+    position: relative;  
+    width: 80%; 
+}
+.SectionsWrapper>section img{
+    height: 40px;
+    width: auto;
+    position: absolute;
+    right: -20%;
+    bottom: 0%;
+    opacity: 0.5;
+    border-radius: 0px;
+}
+.BottomWrapper{
+    text-align: center;
+    height: 4em;
+    line-height: 1em;
+    background-color: rgb(10, 10, 10);
+    border-top: 1px solid snow;
+    margin: 0px 1.5em;
+}
+.BottomWrapper h4{
+    color: rgb(168, 168, 168) !important;
+}
+
+/*! Mobile*/
+
+.MobileBlackSlideContainer{
+    width: 110%;
+    transform: translateX(-5%);
+    height: auto;
+    margin: 2em 0px;
+    background-color: black;
+    padding: 1em 0px;
+}
+.MobileBlackSlideWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 95%;
+
+}
+
+.MobileSectionsWrapper{
+    display: flex;
+    flex-direction: column;
+}
+.MobileSectionsWrapper section{
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+    padding: 0.5em 0.0px 0.5em 0px;
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px solid gainsboro;
+}
+.MobileSectionsWrapper section:last-child{
+    border: none;
+}
+.MobileSectionsWrapper section h6{
+    font-size: 1.2em;
+    color: rgb(255, 30, 0);
+}
+.MobileSectionsWrapper section p{
+    font-size: 0.8em;
+    color: #fafafa;
+    text-align: left;
+}
+.firstYearWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em 0px;
+}
+.firstYearWrapper h4{
+    writing-mode: sideways-lr;
+    text-orientation: sideways;
+    padding: 0.25em 0.25em;
+    font-size: 1.3em;
+    color: #fafafa !important;  
+    font-family: 'Lato', sans-serif;
+    margin: 2em 0px;
+    height: 80%;
+    border-right: 1px solid gainsboro;
+    text-align: center;
+}
+.firstyear{
+    height: 40% !important;
+}
+
+/* TODO: Tablet version */
+@media only screen and (max-width: 1150px) and (min-width:800px){
+
+}
+
+/* TODO: XL Mobile version */
+@media only screen and (min-width:500px){
+.MobileBlackSlideContainer{
+    display: none;
+}
+}
+
+/* TODO: Mobile version */
+@media only screen and (max-width: 499px){
+.BlackSlideContainer{
+    display: none;
+}
+}
