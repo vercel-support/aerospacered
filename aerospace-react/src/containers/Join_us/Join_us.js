@@ -41,7 +41,7 @@ class JoinUs extends Component {
 
     const data = { ...this.state };
     axios
-      .post("https://127.0.1.1:8000/api/join_us/", data)
+      .post("https://aerospaceEC.pythonanywhere.com/api/join_us/", data)
       .then(this.setState({ loading: true }))
       .then((response) => {
         if (response.status === 200) {

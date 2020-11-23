@@ -5,7 +5,7 @@ import classes from './MemberPortrait.module.css';
 
 
 const MemberPortrait = (props) => {
-    let img_url = 'https://127.0.1.1:8000'+props.img_url;
+    let img_url = 'https://aerospaceEC.pythonanywhere.com'+props.img_url;
     const member_link = '/'+ props.member_link;
     
     return (

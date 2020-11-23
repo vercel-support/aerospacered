@@ -17,7 +17,7 @@ class News extends Component{
     
     componentDidMount(){
         this.setState({loading: true});
-        axios.get('https://127.0.1.1:8000/api/articles/')
+        axios.get('https://aerospaceEC.pythonanywhere.com/api/articles/')
             .then(response => {
                 
                 this.setState({articles: response.data.reverse()});

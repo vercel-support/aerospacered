@@ -25,7 +25,7 @@ SECRET_KEY = '$z%pu@q*dj==&6f&%k!%n7_43i&fh)pg4&6ou6@lbp5m$l03yl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['aerospaceEC.pythonanywhere.com ']
 
 
 # Application definition
@@ -108,14 +108,7 @@ CORS_ORIGIN_WHITELIST = (
 
 #Mailing
 #Mail
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.zoho.com'
-EMAIL_HOST_USER = 'admin@mecanica-espoch.com'
-EMAIL_HOST_PASSWORD = '_PatitoFeo@97'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-DEFAULT_FROM_EMAIL = 'admin@mecanica-espoch.com'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

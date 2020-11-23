@@ -52,7 +52,10 @@ const Header = (props)=>{
                     tabIndex='-1'>
  
           <div className={classes.LogoContainer}>
-            <NavLink to='/' onClick={props.switchPage}>
+            <NavLink to='/' 
+              onClick={props.switchToHome}
+              onClickCapture={props.switchToHome}
+              tabIndex='-1' >
             <img
               src={REA_Logo}
               className={classes.LogoImg}

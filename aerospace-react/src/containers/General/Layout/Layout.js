@@ -19,7 +19,7 @@ const Layout = (props) => {
     return(
 
     <React.Fragment>
- 
+        
         <main className={classes.Content}  
             onWheelCapture={props.onScrollMethod}  
             onKeyDownCapture={props.onScrollMethod} 

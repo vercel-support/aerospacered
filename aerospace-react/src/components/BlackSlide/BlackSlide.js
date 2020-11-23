@@ -54,6 +54,8 @@ class BlackSlide extends Component{
                 duration:1500,
                 easing: 'easeOutExpo',
             });
+            this.rightChevronRef.current.style.backgroundColor = 'rgb(214, 29, 5)'
+
         }
         if (this.state.counts < 2){
             this.leftChevronRef.current.style.backgroundColor = '#212121'
@@ -61,17 +63,23 @@ class BlackSlide extends Component{
         }
 
     }
+    //! Upload this if a month is added 
     moveRight=()=>{
-        this.setState({counts: this.state.counts+1,});
-        this.leftChevronRef.current.style.backgroundColor = 'rgb(214, 29, 5)'
+if(this.state.counts < 6){
+    this.setState({counts: this.state.counts+1,});
+    this.leftChevronRef.current.style.backgroundColor = 'rgb(214, 29, 5)'
 
-        anime.timeline({loop:false})
-        .add({
-            targets: this.controllerRef.current,
-            translateX: (this.state.counts+1)*-200,
-            duration:1500,
-            easing: 'easeOutExpo',
-        })
+    anime.timeline({loop:false})
+    .add({
+        targets: this.controllerRef.current,
+        translateX: (this.state.counts+1)*-200,
+        duration:1500,
+        easing: 'easeOutExpo',
+    })
+}else{
+    this.rightChevronRef.current.style.backgroundColor = '#212121'
+
+}
     }
     render(){
 
@@ -157,7 +165,7 @@ class BlackSlide extends Component{
         <React.Fragment>
         <div className={classes.BlackSlideContainer}>
             <img src={LeftChevron} ref={this.leftChevronRef} className={classes.LeftChevron} alt='Left side chevron' onClick={this.moveLeft}/>
-            <img src={RightChevron} right={this.rightChevronRef} className={classes.RightChevron} alt='Right side chevron' onClick={this.moveRight}/>
+            <img src={RightChevron} ref={this.rightChevronRef} className={classes.RightChevron} alt='Right side chevron' onClick={this.moveRight}/>
             <div className={classes.BlackSlideWrapper}>
                 <div className={classes.SliderController} ref={this.controllerRef}>
 

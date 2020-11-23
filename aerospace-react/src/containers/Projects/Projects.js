@@ -19,7 +19,7 @@ class Projects extends Component{
         document.body.scrollTop = window.innerHeight-60; // For Safari
         document.documentElement.scrollTop = window.innerHeight-60;
         this.setState({loading: true});
-        axios.get('https://127.0.1.1:8000/api/projects/')
+        axios.get('https://aerospaceEC.pythonanywhere.com/api/projects/')
             .then(response => {
                 
                 this.setState({projects: response.data});

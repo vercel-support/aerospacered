@@ -15,7 +15,7 @@ const Article = (props) => {
     let article_year = props.date.slice(0, 4);
     let article_month = months[parseInt(props.date.slice(5, 7))-1];
     let article_day = props.date.slice(9, 10);
-    let img_url = 'https://127.0.1.1:8000'+props.img_url;    
+    let img_url = 'https://aerospaceEC.pythonanywhere.com'+props.img_url;    
     return (
         <div className={styles.ArticleContainer}>
            

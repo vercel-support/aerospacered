@@ -36,22 +36,22 @@ class App extends Component {
 
   };
   
-  // componentDidMount() {
-  //   if (
-  //     !this.props.location.pathname === "/about_us" ||
-  //     !this.props.location.pathname === "/join_us" ||
-  //     !this.props.location.pathname === "/projects" ||
-  //     !this.props.location.pathname === "/"
-  //   ) {
-  //     this.setState({ showNavBar: true });
-  //   }
+  componentDidMount() {
+    if (
+      !this.props.location.pathname === "/about_us" ||
+      !this.props.location.pathname === "/join_us" ||
+      !this.props.location.pathname === "/projects" ||
+      !this.props.location.pathname === "/"
+    ) {
+      this.setState({ showNavBar: true });
+    }
 
-  //   axios.get('https://127.0.1.1:8000/api/member_list/')
-  //       .then(response => {
-  //           this.setState({member_list: response.data});
+    axios.get('https://aerospaceEC.pythonanywhere.com/api/member_list/')
+        .then(response => {
+            this.setState({member_list: response.data});
             
-  //       });
-  // }
+        });
+  }
 
   //TODO Navbar controller
   handleScroll = (e) => {
@@ -62,6 +62,9 @@ class App extends Component {
       this.setState({ showNavBar: false });
     };
   };
+  switchToHome = () =>{
+    this.setState({showNavBar:false});
+  }
 
   //TODO Reset scroll when scroll downs
   switchPage = ()=>{
@@ -113,7 +116,8 @@ class App extends Component {
             switchPage={this.switchPage}
             language={this.state.language}
             switchLanguage = {this.switchLanguage} 
-            languageHasChanged={this.state.languageHasChanged}/>
+            languageHasChanged={this.state.languageHasChanged}
+            switchToHome={this.switchToHome}/>
           <Landing 
           onScrollMethod={this.handleScroll}
           closeMobilePanel={this.closeMobilePanel}

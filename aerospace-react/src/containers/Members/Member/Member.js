@@ -38,7 +38,7 @@ class Member extends Component{
   componentDidMount(){
     
 
-    axios.get('https://127.0.1.1:8000/api/member/' + this.props.location.pathname.substr(1))
+    axios.get('https://aerospaceEC.pythonanywhere.com/api/member/' + this.props.location.pathname.substr(1))
     .then(response => {    
         this.setState({member: response.data});    
 

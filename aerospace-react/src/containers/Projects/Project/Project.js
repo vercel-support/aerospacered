@@ -7,7 +7,7 @@ import classes from './Project.module.css';
 //* Image
 //* https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component 
 const Project = (props) =>{
-    let img_url = 'https://127.0.1.1:8000'+props.img_url;
+    let img_url = 'https://aerospaceEC.pythonanywhere.com'+props.img_url;
 
     const monthsES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',];
     const monthsEN = ['Janvier', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',];
