@@ -17,17 +17,17 @@ const MainContent = (props) =>{
             <title>Red Ecuatoriana Aeroespacial</title>
 <meta name="title" content="Red Ecuatoriana Aeroespacial"/>
 <meta name="description" content="La Red Ecuatoriana Aeroespacial es un equipo de investigación y desarrollo multidisciplinario enfocado especialmente en aeroespacial y nano-materiales reconocido por la Senescyt"/>
-<link rel="icon" href="https://www.redaeroespacial.com/static/img/iconREA.ico" />
+<link rel="icon" href="http://aerospaceec.pythonanywhere.com/static/img/iconREA.ico" />
 
 
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
 <meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
 <meta property="og:description" content="La Red Ecuatoriana Aeroespacial es un equipo de investigación y desarrollo multidisciplinario enfocado especialmente en aeroespacial y nano-materiales reconocido por la Senescyt"/>
-<meta property="og:image" content="https://www.redaeroespacial.com/static/img/aerospace.jpg"/>
+<meta property="og:image" content="http://aerospaceec.pythonanywhere.com/static/img/aerospace.jpg"/>
 
 <link rel="canonical" href="http://www.redaeroespacial.com" />
-<link rel="apple-touch-icon" href="https://www.redaeroespacial.com/static/img/aerospace.jpg" />
+<link rel="apple-touch-icon" href="http://aerospaceec.pythonanywhere.com/static/img/iconREA.ico" />
             
             </Helmet>
 

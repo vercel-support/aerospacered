@@ -325,17 +325,17 @@ class JoinUs extends Component {
             <meta property="og:type" content="website"/>
 <meta name="title" content="¡Únete! | Red Ecuatoriana Aeroespacial"/>
 <meta name="description" content="¡Únete a la Red Ecuatoriana Aeroespacial! Este ambicioso proyecto requiere de la colaboración de docentes, investigadores y estudiantes pertenecientes a diferentes áreas."/>
-<link rel="icon" href="https://www.redaeroespacial.com/static/img/iconREA.ico" />
+<link rel="icon" href="http://aerospaceec.pythonanywhere.com/static/img/iconREA.ico" />
 
 
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
 <meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
 <meta property="og:description" content="¡Únete a la Red Ecuatoriana Aeroespacial! Este ambicioso proyecto requiere de la colaboración de docentes, investigadores y estudiantes pertenecientes a diferentes áreas."/>
-<meta property="og:image" content="https://www.redaeroespacial.com/static/img/aerospace.jpg"/>
+<meta property="og:image" content="http://aerospaceec.pythonanywhere.com/static/img/aerospace.jpg"/>
 
 <link rel="canonical" href="http://www.redaeroespacial.com" />
-<link rel="apple-touch-icon" href="https://www.redaeroespacial.com/static/img/aerospace.jpg" />
+<link rel="apple-touch-icon" href="http://aerospaceec.pythonanywhere.com/static/img/iconREA.ico" />
   
 
       </Helmet>
