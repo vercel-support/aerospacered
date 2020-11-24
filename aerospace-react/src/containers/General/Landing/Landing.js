@@ -25,7 +25,6 @@ const Landing = (props) => {
             easing: 'easeOutBack',
         });
         anime.timeline({loop:false})
-
         .add({
             targets: lastLineRef.current,
             translateX: [0, -500],
@@ -36,33 +35,33 @@ const Landing = (props) => {
             easing: 'easeOutBack'
         });
 
-        //TODO Backwards text
-        anime.timeline({loop:false})
-        .add({
-            targets: firstLineRefback.current,
-            translateY: [-150, 50],
-            opacity:[0, 1],
-            duration: 2000,
-            easing: 'easeOutBack',
-            delay:4000
-        });
-        anime.timeline({loop:false})
-        .add({
-            targets: lastLineRefback.current,
-            translateY: [-150, 20],
-            opacity:[0, 1],
-            delay:4000,
-            duration: 2500,
-            easing: 'easeOutBack'
-        });
-        props.onScrollMethod();
-
         return () => {
 
         };    }, [props.hasChanged]);
     //TODO Left text animnation
 
-
+useEffect(() => {
+            //TODO Backwards text
+            anime.timeline({loop:false})
+            .add({
+                targets: firstLineRefback.current,
+                translateY: [-150, 50],
+                opacity:[0, 1],
+                duration: 2000,
+                easing: 'easeOutBack',
+                delay:4000
+            });
+            anime.timeline({loop:false})
+            .add({
+                targets: lastLineRefback.current,
+                translateY: [-150, 20],
+                opacity:[0, 1],
+                delay:4000,
+                duration: 2500,
+                easing: 'easeOutBack'
+            });
+    return () => { };
+}, [props.hasChanged]);
 
 
     
