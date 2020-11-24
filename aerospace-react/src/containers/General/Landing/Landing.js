@@ -80,7 +80,7 @@ useEffect(() => {
                     </div>
                 </div>
                 <h6 className={classes.LeftCornerText}> <div className={classes.textContainer}><span ref={firstLineRef} className={classes.firstline}> THE FUTURE </span> <span ref={lastLineRef} className={classes.secondline} style={{transform:'translateY(20px)',}}>IS NOW!</span></div></h6>
-                <h6 className={classes.LeftCornerText}> <div className={classes.textContainer}><span ref={firstLineRefback} className={classes.firstlineback}> Update this </span> <br/> <span ref={lastLineRefback} className={classes.secondlineback}  >Update this too</span></div></h6>
+                <h6 className={classes.LeftCornerText}> <div className={classes.textContainer}><span ref={firstLineRefback} className={classes.firstlineback}> Work hard </span> <br/> <span ref={lastLineRefback} className={classes.secondlineback}  >Fly high</span></div></h6>
 
                
 
