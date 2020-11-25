@@ -8,6 +8,7 @@ import ig_svg from "../../../static/images/media/ig.svg";
 import fb_svg from "../../../static/images/media/fb.svg";
 import yt_svg from "../../../static/images/media/yt.svg";
 import aerospace_logo from '../../../static/images/REA_Logo.png'
+import espoch_logo from '../../../static/images/espoch.png'
 
 
 const Footer = (props) => {
@@ -30,7 +31,7 @@ const Footer = (props) => {
      
         
       </div>
-      <img src={aerospace_logo} className={classes.aerospace_logo}alt='logo Red Ecuatoriana Aeroespacial logo'/>
+      <img src={espoch_logo} className={classes.aerospace_logo}alt='logo Red Ecuatoriana Aeroespacial logo'/>
 
       
     </div>
