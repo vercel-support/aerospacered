@@ -85,7 +85,7 @@ class Member extends Component{
         </p>
 
         <div className={classes.PersonalInformationList}>
-          <h5><b>Random Fact</b>: {this.state.member.random_fact}</h5>
+          <h5><b>Intereses</b>: {this.state.member.random_fact}</h5>
           <h5><b>Rol:</b> {this.state.member.rol}</h5>
           <h5><b>Ingreso:</b> {this.state.member.legion}</h5>
           <h5><b>Correo</b>: <a href={this.state.member.mail} > {this.state.member.mail} </a></h5>
