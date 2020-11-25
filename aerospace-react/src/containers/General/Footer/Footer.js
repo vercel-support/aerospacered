@@ -9,7 +9,7 @@ import fb_svg from "../../../static/images/media/fb.svg";
 import yt_svg from "../../../static/images/media/yt.svg";
 // import aerospace_logo from '../../../static/images/REA_Logo.png'
 import espoch_logo from '../../../static/images/espoch.png'
-
+import senescyt_logo from '../../../static/images/senescyt.png'
 
 const Footer = (props) => {
   return (
@@ -32,8 +32,8 @@ const Footer = (props) => {
         
       </div>
       <a href='https://espoch.edu.ec/' className={classes.logosWrapper} target="_blank" rel="noopener noreferrer">       
-        <img src={espoch_logo} className={classes.aerospace_logo}alt='logo Red Ecuatoriana Aeroespacial logo'/>
-        <img src={espoch_logo} className={classes.aerospace_logo}alt='logo Red Ecuatoriana Aeroespacial logo'/>
+        <img src={senescyt_logo} className={classes.senescyt_logo}alt='SENESCYT logo'/>
+        <img src={espoch_logo} className={classes.aerospace_logo}alt='logo Escuela Superior Politécnica de chimborazo ESPCOH'/>
 
       </a>
       

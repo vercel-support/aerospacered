@@ -76,6 +76,12 @@
     margin: auto;
     filter: invert(1);
 }
+.senescyt_logo {
+    height: 175px;
+    display: block;
+    margin: auto;
+    filter: grayscale(100)
+}
 
 
  /* TODO: Tablet version */
@@ -92,6 +98,7 @@
     .SocialMediaContainer{
         width: 80vw;
         padding: 1em;
+
     }
     .SocialMediaContainer img{
         height: 45px;
@@ -111,6 +118,7 @@
         row-gap: 0.5em;
     }
     
+    
 }
 
 /* TODO: Mobile version */
@@ -119,11 +127,13 @@
         height: auto;
         background-size: cover;
         background-position-y: top;    
+        display: flex;
+        flex-direction: column;
     }
     .SocialMediaContainer{
-        width: 80vw;
+        width: 100vw;
         padding: 1em;
-        flex-wrap: wrap;
+        flex-wrap:  wrap;
     }
     .SocialMediaContainer img{
         height: 45px;
@@ -151,4 +161,13 @@
         justify-content: left;
         row-gap: 0.5em;
     }
+    .logosWrapper{
+    
+        margin: auto;
+    }
+    .logosWrapper img{
+        height: 92px;
+
+    }
+
 }
