@@ -49,7 +49,6 @@ class App extends Component {
     axios.get('https://aerospaceEC.pythonanywhere.com/api/members/')
         .then(response => {
             this.setState({member_list: response.data});
-            
         });
   }
 
@@ -195,15 +194,14 @@ class App extends Component {
     } else {
       
       memberComponents = this.state.member_list.map(memberUser =>{
-        return <Route path={'/'+memberUser.member_link} component={Member} key={memberUser.name} />
+        console.log(memberUser.member_link)
+        return <Route path={"/"+memberUser.member_link} component={Member} key={memberUser.name} />
       })
       
         content = (
         <div>
           <Header showNavBar={true} />
-
             {memberComponents}
-          
         </div>
       )
       
