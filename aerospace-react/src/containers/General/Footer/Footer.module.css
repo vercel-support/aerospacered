@@ -69,6 +69,8 @@
     height: 175px;
     display: block;
     margin: auto;
+    margin-right: 2.5em;
+    filter: invert(1);
 }
 
  /* TODO: Tablet version */
