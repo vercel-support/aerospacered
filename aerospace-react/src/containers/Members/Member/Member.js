@@ -36,13 +36,13 @@ class Member extends Component{
     
 
   componentDidMount(){
-    
 
-    axios.get('https://aerospaceEC.pythonanywhere.com/api/member' + this.props.location.pathname.substr(1))
+    axios.get('https://aerospaceEC.pythonanywhere.com/api/member/' + this.props.location.pathname.substr(1))
     .then(response => {    
         this.setState({member: response.data});    
 
-                  
+        console.log(this.state.member.img)
+
     })
     .then( response =>{
         this.setState({loading:false });
@@ -93,7 +93,7 @@ class Member extends Component{
       
       </div>
       <div className={classes.leftWrapper}>
-        <img src={'https://aerospaceEC.pythonanywhere.com/media/members/'+this.state.member.img} className={classes.Portrait} alt={this.state.member.name}/>
+        <img src={'https://aerospaceEC.pythonanywhere.com'+this.state.member.img} className={classes.Portrait} alt={this.state.member.name}/>
         <div className={classes.MediaWrapper}>
           <a href={this.state.member.research_link}><img src={rg} alt='ResearchGate link'/></a>
           <a href={this.state.member.twitter_link}><img className={classes.tws}  src={tw} alt='Twitter link'/></a>
