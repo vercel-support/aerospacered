@@ -7,8 +7,9 @@
     width: 90%;
     margin: auto;
     justify-content: center;
-    row-gap: 0px;
-    
+    row-gap: 1em;
+    column-gap: 1em;
+
 }
  /* TODO: Tablet version */
  @media only screen and (max-width: 1150px) and (min-width:800px){

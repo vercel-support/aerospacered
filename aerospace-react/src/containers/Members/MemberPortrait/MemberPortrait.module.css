@@ -47,8 +47,9 @@
 }
 
 .MemberSpace img{
-    height: 400px;
-    width: 350px;
+    height: 350px;
+    width: auto;
+
     
     filter: saturate(0%) brightness(80%);
     transition: all 0.5s ease-in;
