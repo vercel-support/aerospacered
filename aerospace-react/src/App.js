@@ -46,7 +46,7 @@ class App extends Component {
       this.setState({ showNavBar: true });
     }
 
-    axios.get('https://aerospaceEC.pythonanywhere.com/api/member_list/')
+    axios.get('https://aerospaceEC.pythonanywhere.com/api/members/')
         .then(response => {
             this.setState({member_list: response.data});
             
