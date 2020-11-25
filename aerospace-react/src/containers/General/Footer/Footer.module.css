@@ -71,13 +71,13 @@
 
 }
 .aerospace_logo {
-    height: 175px;
+    height: 125px;
     display: block;
     margin: auto;
     filter: invert(1);
 }
 .senescyt_logo {
-    height: 175px;
+    height: 125px;
     display: block;
     margin: auto;
     filter: grayscale(100)
