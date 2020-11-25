@@ -31,8 +31,10 @@ const Footer = (props) => {
      
         
       </div>
-      <a href='https://espoch.edu.ec/' target="_blank" rel="noopener noreferrer">       
+      <a href='https://espoch.edu.ec/' className={classes.logosWrapper} target="_blank" rel="noopener noreferrer">       
         <img src={espoch_logo} className={classes.aerospace_logo}alt='logo Red Ecuatoriana Aeroespacial logo'/>
+        <img src={espoch_logo} className={classes.aerospace_logo}alt='logo Red Ecuatoriana Aeroespacial logo'/>
+
       </a>
       
     </div>

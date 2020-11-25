@@ -64,14 +64,19 @@
     font-weight: normal;
     padding-right: 1em;
 }
+.logosWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2.5em;
 
+}
 .aerospace_logo {
     height: 175px;
     display: block;
     margin: auto;
-    margin-right: 2.5em;
     filter: invert(1);
 }
+
 
  /* TODO: Tablet version */
  @media only screen and (max-width: 1150px) and (min-width:800px){
