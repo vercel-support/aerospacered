@@ -40,10 +40,13 @@
 .MememberText h5{
     font-size: 1.6em;
     font-weight: bold;
+    text-align: left;
 }
 .MememberText h6{
     font-size: 1.4em;
     position: relative;
+    text-align: left;
+
 }
 
 .MemberSpace img{
