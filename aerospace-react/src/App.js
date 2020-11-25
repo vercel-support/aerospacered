@@ -201,11 +201,9 @@ class App extends Component {
         content = (
         <div>
           <Header showNavBar={true} />
-          <Switch>
 
             {memberComponents}
           
-          </Switch>
         </div>
       )
       
