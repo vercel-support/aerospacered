@@ -17,7 +17,7 @@ class Members extends Component{
 
     componentDidMount(){
        
-        axios.get('https://127.0.1.1:8000/api/members/')
+        axios.get('https://aerospaceec.pythonanywhere.com/api/members/')
             .then(response => {    
                 this.setState({members: response.data});              
             })

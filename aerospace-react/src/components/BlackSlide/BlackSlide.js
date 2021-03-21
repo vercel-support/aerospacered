@@ -42,7 +42,6 @@ class BlackSlide extends Component{
 
         if (this.state.counts > 0){
             this.leftChevronRef.current.style.backgroundColor = 'rgb(214, 29, 5)'
-            let size = this.sectionRef.current.style.width;
             console.log(this.state.sectinoSize);
             let oldState = this.state.counts;
             this.setState({counts: oldState-1,});
@@ -385,53 +384,3 @@ if(this.state.counts < 6){
 
 export default BlackSlide;
 
-
-{/* <h4>2020</h4>
-<section>
-        <h6>{        this.props.language === "es"
-            ? polyglotES.t("january20.title")
-            : polyglotEN.t("january20.title")} </h6>
-        <p>{        this.props.language === "es"
-            ? polyglotES.t("january20.body")
-            : polyglotEN.t("january20.body")} </p>
-    </section>
-    <section>
-        <h6>{        this.props.language === "es"
-            ? polyglotES.t("february20.title")
-            : polyglotEN.t("february20.title")} </h6>
-        <p>{        this.props.language === "es"
-            ? polyglotES.t("february20.title")
-            : polyglotEN.t("february20.title")} </p>
-    </section>
-    <section>
-        <h6>{        this.props.language === "es"
-            ? polyglotES.t("march20.title")
-            : polyglotEN.t("march20.title")} </h6>
-        <p>{        this.props.language === "es"
-            ? polyglotES.t("march20.body")
-            : polyglotEN.t("march20.body")} </p>
-    </section> 
-    <section>
-        <h6>{        this.props.language === "es"
-            ? polyglotES.t("april20.title")
-            : polyglotEN.t("april20.title")} </h6>
-        <p>{        this.props.language === "es"
-            ? polyglotES.t("april20.body")
-            : polyglotEN.t("april20.body")} </p>
-    </section> 
-    <section>
-        <h6>{        this.props.language === "es"
-            ? polyglotES.t("may20.title")
-            : polyglotEN.t("may20.title")} </h6>
-        <p>{        this.props.language === "es"
-            ? polyglotES.t("may20.body")
-            : polyglotEN.t("may20.body")} </p>
-    </section> 
-    <section>
-        <h6>{        this.props.language === "es"
-            ? polyglotES.t("june20.title")
-            : polyglotEN.t("june20.title")} </h6>
-        <p>{        this.props.language === "es"
-            ? polyglotES.t("june20.body")
-            : polyglotEN.t("june20.body")} </p>
-    </section>  */}
