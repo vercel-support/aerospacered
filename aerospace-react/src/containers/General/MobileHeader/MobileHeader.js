@@ -117,7 +117,15 @@ const Header = (props)=>{
                 {(props.language === 'es') ? '¡Únete!':'Join us'}
               </NavLink>
             </div>
-            
+            <div className={classes.LinkWrapper3}  ref={panelRef3}>
+              <NavLink 
+              className={classes.Link} 
+              activeClassName={classes.active}
+              to="/donations">
+                
+                {(props.language === 'es') ? 'Apóyanos':'Support us'}
+              </NavLink>
+            </div>           
             <div className={classes.LinkWrapper4}  ref={panelRef4}>
               <span 
               className={classes.LinkLanguage} 

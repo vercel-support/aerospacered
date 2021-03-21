@@ -132,6 +132,24 @@ const Header = (props)=>{
                   classNames='transitionLink'
                   unmountOnEnter 
                 >
+              <NavLink 
+              className={classes.Link} 
+              activeClassName={classes.active}
+              to="/donations"
+              onClick={props.switchPage}>
+                  {(props.language === 'es') ? 'Apóyanos':'Support us'}
+                
+                
+              </NavLink>
+              </CSSTransition>
+            </div>
+            <div>
+            <CSSTransition
+                  in={props.languageHasChanged}
+                  timeout={500}
+                  classNames='transitionLink'
+                  unmountOnEnter 
+                >
               <div
               className={classes.LanguageSelector} 
               onClick={props.switchLanguage}

@@ -9,11 +9,15 @@ from rest_framework import permissions
 from main.serializers import *
 from main.models import Article, Article_doc, Project
 #Json
-from rest_framework.parsers import JSONParser 
+from rest_framework.parsers import JSONParser
 
 #Mailing
 from django.template import loader
 from django.core.mail import EmailMultiAlternatives
+
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+import os
 
 @api_view(['GET'])
 @permission_classes((permissions.AllowAny,))
@@ -38,7 +42,7 @@ def members(request):
 
 @api_view(['GET'])
 @permission_classes((permissions.AllowAny,))
-def member(request, user_name): 
+def member(request, user_name):
     member     = Member.objects.filter(member_link = user_name).get()
     serializer  = MemberSerializer(member)
     return Response(serializer.data)
@@ -49,21 +53,19 @@ def member(request, user_name):
 def join_us(request):
     data = JSONParser().parse(request)
     #Mailing
-    subject = data['subject']
-    from_email = 'admin@mecanica-espoch.com'
-    to_address = ['sss.coronelr@ss.com',]
-
-
-    html_message = loader.render_to_string('mail_html.html', {
+    message = Mail(
+        from_email='general@6268up.com',
+        to_emails=['vicente.coronelr@gmail.com', 'redecuatorianaear@gmail.com'],
+        subject='Red Ecuatoriana Aeroespacial ',
+        html_content=loader.render_to_string('mail_html.html', {
         'name': data['name'],
         'college': data['college'],
         'team': data['area'],
         'email': data['mail'],
         'comments': data['description'],
-    })
-    msg = EmailMultiAlternatives(subject,html_message, from_email,to_address)
-    msg.attach_alternative(html_message, "text/html")
-    msg.send()
+        }))
+    sg = SendGridAPIClient(os.getenv('SENDGRID_KEY'))
+    response = sg.send(message)
     return Response(data, status=200)
 
 #Error handlers

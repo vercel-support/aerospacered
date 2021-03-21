@@ -322,22 +322,20 @@ class JoinUs extends Component {
           {(this.props.language === 'es') ? '¡Únete! | Red Ecuatoriana Aeroespacial':'Join us | Red Ecuatoriana Aeroespacial'}
             </title>
         
-            <meta property="og:type" content="website"/>
 <meta name="title" content="¡Únete! | Red Ecuatoriana Aeroespacial"/>
 <meta name="description" content="¡Únete a la Red Ecuatoriana Aeroespacial! Este ambicioso proyecto requiere de la colaboración de docentes, investigadores y estudiantes pertenecientes a diferentes áreas."/>
-<link rel="icon" href="https://www.redaeroespacial.com/static/img/iconREA.ico" />
-
+<link rel="icon" href="https://aerospaceec.pythonanywhere.com/static/img/REA_Logo.png" />
 
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
 <meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
-<meta property="og:description" content="¡Únete a la Red Ecuatoriana Aeroespacial! Este ambicioso proyecto requiere de la colaboración de docentes, investigadores y estudiantes pertenecientes a diferentes áreas."/>
-<meta property="og:image" content="https://www.redaeroespacial.com/static/img/aerospace.jpg"/>
+<meta property="og:description" content="La Red Ecuatoriana Aeroespacial fue fundada el 2019 y reconocida legalmente por la Senescyt en 2020. Desde entonces se ha trabajado arduamente en los proyectos planteados."/>
 
+      
 <link rel="canonical" href="http://www.redaeroespacial.com" />
-<link rel="apple-touch-icon" href="https://www.redaeroespacial.com/static/img/aerospace.jpg" />
+<link rel="apple-touch-icon" href="https://aerospaceec.pythonanywhere.com/static/img/REA_Logo.png" />
   
-
+    
       </Helmet>
       <div className={classes.JoinUs}>
         <h2>{

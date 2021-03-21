@@ -72,24 +72,21 @@ const polyglotES = new Polyglot(phrasesES);
           <title>
             {(props.language === 'es') ? 'Sobre nosotros | Red Ecuatoriana Aeroespacial':'About us | Red Ecuatoriana Aeroespacial'}
           </title>
-
-          <meta property="og:type" content="website"/>
 <meta name="title" content="Sobre nosotros | Red Ecuatoriana Aeroespacial"/>
 <meta name="description" content="La Red Ecuatoriana Aeroespacial fue fundada el 2019 y reconocida legalmente por la Senescyt en 2020. Desde entonces se ha trabajado arduamente en los proyectos planteados."/>
-<link rel="icon" href="https://www.redaeroespacial.com/static/img/iconREA.ico" />
-
+<link rel="icon" href="https://aerospaceec.pythonanywhere.com/static/img/REA_Logo.png" />
 
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
 <meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
 <meta property="og:description" content="La Red Ecuatoriana Aeroespacial fue fundada el 2019 y reconocida legalmente por la Senescyt en 2020. Desde entonces se ha trabajado arduamente en los proyectos planteados."/>
-<meta property="og:image" content="https://www.redaeroespacial.com/static/img/aerospace.jpg"/>
 
+      
 <link rel="canonical" href="http://www.redaeroespacial.com" />
-<link rel="apple-touch-icon" href="https://www.redaeroespacial.com/static/img/aerospace.jpg" />
+<link rel="apple-touch-icon" href="https://aerospaceec.pythonanywhere.com/static/img/REA_Logo.png" />
   
-      
-      
+    
+
       
         </Helmet>
           <div className={classes.AboutUs}>

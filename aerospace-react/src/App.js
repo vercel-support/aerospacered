@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group'
 import axios from 'axios';
+import {Helmet} from 'react-helmet';
 
 //* JSX Containers
 import Layout from "./containers/General/Layout/Layout";
@@ -12,6 +13,7 @@ import Landing from "./containers/General/Landing/Landing";
 import MainContent from "./containers/Home/Main/MainContent";
 import Projects from "./containers/Projects/Projects";
 import AboutUs from "./containers/About_us/About_us";
+import Donations from "./containers/Donations/Donations";
 import JoinUs from "./containers/Join_us/Join_us";
 import Footer from "./containers/General/Footer/Footer";
 
@@ -41,6 +43,7 @@ class App extends Component {
       !this.props.location.pathname === "/about_us" ||
       !this.props.location.pathname === "/join_us" ||
       !this.props.location.pathname === "/projects" ||
+      !this.props.location.pathname === "/donations" ||
       !this.props.location.pathname === "/"
     ) {
       this.setState({ showNavBar: true });
@@ -106,6 +109,7 @@ class App extends Component {
       this.props.location.pathname === "/about_us" ||
       this.props.location.pathname === "/join_us" ||
       this.props.location.pathname === "/projects" ||
+      this.props.location.pathname === "/donations" ||
       this.props.location.pathname === "/"
     ) {
       var content = (
@@ -174,6 +178,21 @@ class App extends Component {
                 </CSSTransition>
               )}
               </Route>
+              <Route path="/donations"  >
+                {({ match }) => (
+                <CSSTransition
+                  in={match != null}
+                  timeout={400}
+                  classNames="page"
+                  unmountOnExit
+                  
+                >
+                  <div className="page">
+                    <Donations hasChanged={this.state.hasChanged} language={this.state.language} />
+                  </div>
+                </CSSTransition>
+              )}
+              </Route>
               <Route path="/" exact >
                 {({ match }) => (
                 <CSSTransition
@@ -213,6 +232,25 @@ class App extends Component {
     return (
       <React.Fragment>
         {/* Header */}
+        <Helmet>
+          <meta property="og:type" content="website"/>
+<meta name="title" content="¡Apoya el desarrollo! | Red Ecuatoriana Aeroespacial"/>
+<link rel="icon" href="https://aerospaceec.pythonanywhere.com/static/img/REA_Logo.png" />
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
+<meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
+<meta property="og:description" content="La Red Ecuatoriana Aeroespacial fue fundada el 2019 y reconocida legalmente por la Senescyt en 2020. Desde entonces se ha trabajado arduamente en los proyectos planteados."/>
+
+      
+<link rel="canonical" href="http://www.redaeroespacial.com" />
+<link rel="apple-touch-icon" href="https://aerospaceec.pythonanywhere.com/static/img/REA_Logo.png" />
+  
+    
+      
+        </Helmet>
+
+
         <MobileHeader 
           lateralMenu={this.state.showMobileMenu}
           panelController={this.mobilePanel} 
