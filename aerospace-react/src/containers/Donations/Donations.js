@@ -76,7 +76,7 @@ const polyglotES = new Polyglot(phrasesES);
             {(props.language === 'es') ? '¡Apoya el desarrollo! | Red Ecuatoriana Aeroespacial':'Support us! | Red Ecuatoriana Aeroespacial'}
           </title>
           <meta name="title" content="¡Apoya el desarrollo! | Red Ecuatoriana Aeroespacial"/>
-          <meta name="description" content="Apoya a la Red Ecuatoriana Aeroespacial para lograr culminar el proyecto relacionado al diseño y construcción de un UAV mediante donaciones o la adquisición de cursos."/>
+          <meta name="description" content="Apoya a la Red Ecuatoriana Aeroespacial para lograr  culminar el proyecto relacionado al diseño y construcción de un UAV mediante donaciones o la adquisición de cursos."/>
           <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.facebook.com/Aerospace.ec"/>
 <meta property="og:title" content="Red Ecuatoriana Aeroespacial"/>
