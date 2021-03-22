@@ -12,7 +12,54 @@ const Landing = (props) => {
     const firstLineRefback = useRef(null);
     const lastLineRefback = useRef(null);
 
+    useEffect(() => {
+        //TODO Fordwards text
+        anime.timeline({loop:false})
 
+        .add({
+            targets: firstLineRef.current,
+            translateX: [100, 200],
+            opacity:[1, 0],
+            delay:1500,
+            duration: 3500,
+            easing: 'easeOutBack',
+        });
+        anime.timeline({loop:false})
+
+        .add({
+            targets: lastLineRef.current,
+            translateX: [0, -500],
+            scale:[1, 1.4],
+            opacity:[1, 0],
+            delay:1500,
+            duration: 4500,
+            easing: 'easeOutBack'
+        });
+
+        //TODO Backwards text
+        anime.timeline({loop:false})
+        .add({
+            targets: firstLineRefback.current,
+            translateY: [-150, 50],
+            opacity:[0, 1],
+            duration: 2000,
+            easing: 'easeOutBack',
+            delay:4000
+        });
+        anime.timeline({loop:false})
+        .add({
+            targets: lastLineRefback.current,
+            translateY: [-150, 20],
+            opacity:[0, 1],
+            delay:4000,
+            duration: 2500,
+            easing: 'easeOutBack'
+        });
+        props.onScrollMethod();
+
+        return () => {
+
+        };    }, [props.hasChanged]);
     //TODO Left text animnation
 
 

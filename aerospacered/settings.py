@@ -25,7 +25,6 @@ SECRET_KEY = '$z%pu@q*dj==&6f&%k!%n7_43i&fh)pg4&6ou6@lbp5m$l03yl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['aerospaceEC.pythonanywhere.com ']
 
 
 # Application definition
@@ -84,27 +83,6 @@ WSGI_APPLICATION = 'aerospacered.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'aerospace_main',
-        'USER': 'root',
-        'PASSWORD': 'bocetos97',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
-    }
-}
-#Security
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
-SECURE_SSL_REDIRECT = False
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = (
-    'https://127.0.1.1:8000/',
-    'localhost:8000'
-)
 
 #Mailing
 #Mail
